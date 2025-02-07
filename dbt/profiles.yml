@@ -1,0 +1,9 @@
+dbt_beginner_profile:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'duck_db_files/database_name.duckdb'
+      extensions:
+        - httpfs
+        - parquet

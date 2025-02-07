@@ -43,25 +43,10 @@ OPEN_METEO_API_KEY=your_open_meteo_api_key
 DUCKDB_PATH=./weather_data.duckdb
 ```
 
-### 3️⃣ Install Dependencies
+### 3️⃣ Run docker
 
 ```bash
-pip install -r airflow/requirements.txt
-pip install dbt-core duckdb
-```
-
-### 4️⃣ Initialize Airflow with SQLite Backend
-
-```bash
-export AIRFLOW_HOME=./airflow
-airflow db init
-```
-
-### 5️⃣ Run Airflow Scheduler and Webserver
-
-```bash
-airflow scheduler &
-airflow webserver -p 8080
+docker run -p 8080:8080 -v $PWD/airflow:/opt/airflow -u $(id -u) --rm --restart no apache/airflow standalone
 ```
 
 Access Airflow at [http://localhost:8080](http://localhost:8080) and activate the `weather_elt_dag` to start the data pipeline.

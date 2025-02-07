@@ -1,0 +1,7 @@
+*.csv
+airflow/standalone_admin_password.txt 
+airflow/airflow.db 
+airflow/airflow-webserver.pid 
+dbt/data/COPERNICUS_EU_RAW_OBSERVATIONS.csv 
+dbt/duck_db_files/database_name.duckdb
+dbt/target/
