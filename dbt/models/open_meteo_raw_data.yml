@@ -1,0 +1,100 @@
+version: 2
+
+models:
+  - name: open_meteo_raw_data
+    description: "Raw weather data fetched from Open-Meteo API, structured as hourly observations."
+    columns:
+      - name: latitude
+        description: "Latitude of the requested location."
+        tests:
+          - not_null
+
+      - name: longitude
+        description: "Longitude of the requested location."
+        tests:
+          - not_null
+
+      - name: generationtime_ms
+        description: "Time taken to generate the forecast in milliseconds."
+        tests:
+          - not_null
+
+      - name: utc_offset_seconds
+        description: "UTC offset in seconds."
+        tests:
+          - not_null
+
+      - name: timezone
+        description: "Timezone of the requested location."
+        tests:
+          - not_null
+
+      - name: timezone_abbreviation
+        description: "Timezone abbreviation of the requested location."
+        tests:
+          - not_null
+
+      - name: elevation
+        description: "Elevation of the requested location in meters."
+        tests:
+          - not_null
+
+      - name: hourly_units
+        description: "Map of hourly measurement units for each weather variable."
+        tests:
+          - not_null
+
+      - name: time
+        description: "Array of timestamps corresponding to hourly weather data."
+        tests:
+          - not_null
+
+      - name: temperature_2m
+        description: "Array of hourly temperature values at 2 meters above ground level."
+        tests:
+          - not_null
+
+      - name: precipitation
+        description: "Array of hourly total precipitation values in mm."
+        tests:
+          - not_null
+
+      - name: rain
+        description: "Array of hourly rain values in mm."
+        tests:
+          - not_null
+
+      - name: snowfall
+        description: "Array of hourly snowfall values in mm."
+        tests:
+          - not_null
+
+      - name: surface_pressure
+        description: "Array of hourly surface pressure values in hPa."
+        tests:
+          - not_null
+
+      - name: cloud_cover
+        description: "Array of hourly cloud cover percentage values."
+        tests:
+          - not_null
+
+      - name: evapotranspiration
+        description: "Array of hourly evapotranspiration values in mm."
+        tests:
+          - not_null
+
+      - name: wind_speed_10m
+        description: "Array of hourly wind speed values at 10 meters above ground level in m/s."
+        tests:
+          - not_null
+
+      - name: soil_temperature_0cm
+        description: "Array of hourly soil temperature values at 0cm depth in °C."
+        tests:
+          - not_null
+
+      - name: soil_moisture_0_to_1cm
+        description: "Array of hourly soil moisture values in the 0 to 1 cm layer in m³/m³."
+        tests:
+          - not_null
