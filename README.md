@@ -46,9 +46,7 @@ DUCKDB_PATH=./weather_data.duckdb
 ### 3️⃣ Run docker
 
 ```bash
-docker run -p 8080:8080 -v $PWD/airflow:/opt/airflow -u $(id -u) --rm --restart no apache/airflow standalone
-
-docker run -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock -v $PWD/airflow:/opt/airflow -u $(id -u) --rm --restart no apache/airflow standalone
+docker run -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock -v $PWD/airflow:/opt/airflow -v /Users/ericliao/WNV_Culex_Evidence_UI:/opt/evidence_UI -v $HOME/.aws:/home/airflow/.aws -u $(id -u) -d --rm --restart no apache/airflow standalone
 ```
 
 Access Airflow at [http://localhost:8080](http://localhost:8080) and activate the `weather_elt_dag` to start the data pipeline.

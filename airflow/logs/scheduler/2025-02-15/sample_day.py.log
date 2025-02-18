@@ -1,0 +1,187 @@
+[2025-02-15T01:12:35.367+0000] {processor.py:186} INFO - Started process (PID=77) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:12:35.368+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:12:35.373+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:12:35.372+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:12:35.904+0000] {processor.py:925} INFO - DAG(s) 'weather_etl' retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:12:35.977+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:12:35.977+0000] {override.py:1911} INFO - Created Permission View: can read on DAG:weather_etl
+[2025-02-15T01:12:35.984+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:12:35.983+0000] {override.py:1911} INFO - Created Permission View: can edit on DAG:weather_etl
+[2025-02-15T01:12:35.988+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:12:35.988+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG:weather_etl
+[2025-02-15T01:12:35.994+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:12:35.994+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Run:weather_etl
+[2025-02-15T01:12:35.999+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:12:35.999+0000] {override.py:1911} INFO - Created Permission View: can create on DAG Run:weather_etl
+[2025-02-15T01:12:36.003+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:12:36.003+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG Run:weather_etl
+[2025-02-15T01:12:36.008+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:12:36.008+0000] {override.py:1911} INFO - Created Permission View: menu access on DAG Run:weather_etl
+[2025-02-15T01:12:36.009+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:12:36.009+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-15T01:12:36.015+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:12:36.014+0000] {dag.py:3262} INFO - Creating ORM DAG for weather_etl
+[2025-02-15T01:12:36.025+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:12:36.025+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_etl to 2024-01-02 00:00:00+00:00, run_after=2024-01-03 00:00:00+00:00
+[2025-02-15T01:12:36.037+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.677 seconds
+[2025-02-15T01:13:06.284+0000] {processor.py:186} INFO - Started process (PID=78) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:13:06.286+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:13:06.290+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:13:06.289+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:13:06.621+0000] {processor.py:925} INFO - DAG(s) 'weather_etl' retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:13:06.631+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:13:06.631+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-15T01:13:06.640+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:13:06.640+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_etl to 2024-01-02 00:00:00+00:00, run_after=2024-01-03 00:00:00+00:00
+[2025-02-15T01:13:06.651+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.376 seconds
+[2025-02-15T01:13:36.797+0000] {processor.py:186} INFO - Started process (PID=79) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:13:36.799+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:13:36.803+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:13:36.802+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:13:37.111+0000] {processor.py:925} INFO - DAG(s) 'weather_etl' retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:13:37.122+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:13:37.122+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-15T01:13:37.131+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:13:37.131+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_etl to 2024-01-02 00:00:00+00:00, run_after=2024-01-03 00:00:00+00:00
+[2025-02-15T01:13:37.142+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.353 seconds
+[2025-02-15T01:14:07.321+0000] {processor.py:186} INFO - Started process (PID=80) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:14:07.322+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:14:07.326+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:14:07.325+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:14:07.766+0000] {processor.py:925} INFO - DAG(s) 'weather_etl' retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:14:07.777+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:14:07.777+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-15T01:14:07.788+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:14:07.788+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_etl to 2024-01-02 00:00:00+00:00, run_after=2024-01-03 00:00:00+00:00
+[2025-02-15T01:14:07.797+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.490 seconds
+[2025-02-15T01:14:38.022+0000] {processor.py:186} INFO - Started process (PID=81) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:14:38.023+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:14:38.025+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:14:38.025+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:14:38.289+0000] {processor.py:925} INFO - DAG(s) 'weather_etl' retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:14:38.297+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:14:38.297+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-15T01:14:38.307+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:14:38.307+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_etl to 2024-01-02 00:00:00+00:00, run_after=2024-01-03 00:00:00+00:00
+[2025-02-15T01:14:38.316+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.302 seconds
+[2025-02-15T01:15:08.522+0000] {processor.py:186} INFO - Started process (PID=82) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:15:08.523+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:15:08.526+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:15:08.525+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:15:08.778+0000] {processor.py:925} INFO - DAG(s) 'weather_etl' retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:15:08.786+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:15:08.786+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-15T01:15:08.794+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:15:08.794+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_etl to 2024-01-02 00:00:00+00:00, run_after=2024-01-03 00:00:00+00:00
+[2025-02-15T01:15:08.804+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.287 seconds
+[2025-02-15T01:15:38.953+0000] {processor.py:186} INFO - Started process (PID=83) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:15:38.955+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:15:38.959+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:15:38.958+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:15:39.265+0000] {processor.py:925} INFO - DAG(s) 'weather_etl' retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:15:39.275+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:15:39.275+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-15T01:15:39.284+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:15:39.284+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_etl to 2024-01-02 00:00:00+00:00, run_after=2024-01-03 00:00:00+00:00
+[2025-02-15T01:15:39.295+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.351 seconds
+[2025-02-15T01:16:09.492+0000] {processor.py:186} INFO - Started process (PID=84) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:16:09.494+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:16:09.499+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:16:09.499+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:16:09.839+0000] {processor.py:925} INFO - DAG(s) 'weather_etl' retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:16:09.853+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:16:09.852+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-15T01:16:09.865+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:16:09.865+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_etl to 2024-01-02 00:00:00+00:00, run_after=2024-01-03 00:00:00+00:00
+[2025-02-15T01:16:09.876+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.396 seconds
+[2025-02-15T01:16:40.013+0000] {processor.py:186} INFO - Started process (PID=85) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:16:40.014+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:16:40.018+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:16:40.017+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:16:40.309+0000] {processor.py:925} INFO - DAG(s) 'weather_etl' retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:16:40.319+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:16:40.318+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-15T01:16:40.327+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:16:40.327+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_etl to 2024-01-02 00:00:00+00:00, run_after=2024-01-03 00:00:00+00:00
+[2025-02-15T01:16:40.336+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.334 seconds
+[2025-02-15T01:17:10.550+0000] {processor.py:186} INFO - Started process (PID=86) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:17:10.551+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:17:10.554+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:17:10.553+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:17:10.868+0000] {processor.py:925} INFO - DAG(s) 'weather_etl' retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:17:10.877+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:17:10.877+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-15T01:17:10.887+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:17:10.887+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_etl to 2024-01-02 00:00:00+00:00, run_after=2024-01-03 00:00:00+00:00
+[2025-02-15T01:17:10.897+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.355 seconds
+[2025-02-15T01:17:41.070+0000] {processor.py:186} INFO - Started process (PID=87) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:17:41.071+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:17:41.074+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:17:41.074+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:17:41.468+0000] {processor.py:925} INFO - DAG(s) 'weather_etl' retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:17:41.478+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:17:41.477+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-15T01:17:41.487+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:17:41.487+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_etl to 2024-01-02 00:00:00+00:00, run_after=2024-01-03 00:00:00+00:00
+[2025-02-15T01:17:41.497+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.434 seconds
+[2025-02-15T01:18:11.698+0000] {processor.py:186} INFO - Started process (PID=88) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:18:11.699+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:18:11.701+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:18:11.701+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:18:11.949+0000] {processor.py:925} INFO - DAG(s) 'weather_etl' retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:18:11.958+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:18:11.957+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-15T01:18:11.968+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:18:11.968+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_etl to 2024-01-02 00:00:00+00:00, run_after=2024-01-03 00:00:00+00:00
+[2025-02-15T01:18:11.980+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.288 seconds
+[2025-02-15T01:18:42.168+0000] {processor.py:186} INFO - Started process (PID=89) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:18:42.172+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:18:42.182+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:18:42.180+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:18:42.691+0000] {processor.py:925} INFO - DAG(s) 'weather_etl' retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:18:42.701+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:18:42.701+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-15T01:18:42.711+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:18:42.711+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_etl to 2024-01-02 00:00:00+00:00, run_after=2024-01-03 00:00:00+00:00
+[2025-02-15T01:18:42.720+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.572 seconds
+[2025-02-15T01:19:12.853+0000] {processor.py:186} INFO - Started process (PID=90) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:19:12.854+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:19:12.855+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:19:12.855+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:19:13.090+0000] {processor.py:925} INFO - DAG(s) 'weather_etl' retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:19:13.098+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:19:13.098+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-15T01:19:13.108+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:19:13.108+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_etl to 2024-01-02 00:00:00+00:00, run_after=2024-01-03 00:00:00+00:00
+[2025-02-15T01:19:13.120+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.271 seconds
+[2025-02-15T01:19:43.303+0000] {processor.py:186} INFO - Started process (PID=91) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:19:43.305+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:19:43.309+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:19:43.308+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:19:43.625+0000] {processor.py:925} INFO - DAG(s) 'weather_etl' retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:19:43.634+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:19:43.634+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-15T01:19:43.644+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:19:43.644+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_etl to 2024-01-02 00:00:00+00:00, run_after=2024-01-03 00:00:00+00:00
+[2025-02-15T01:19:43.653+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.360 seconds
+[2025-02-15T01:20:13.809+0000] {processor.py:186} INFO - Started process (PID=92) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:20:13.811+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:20:13.813+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:20:13.813+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:20:14.265+0000] {processor.py:925} INFO - DAG(s) 'weather_etl' retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:20:14.279+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:20:14.279+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-15T01:20:14.290+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:20:14.290+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_etl to 2024-01-02 00:00:00+00:00, run_after=2024-01-03 00:00:00+00:00
+[2025-02-15T01:20:14.306+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.506 seconds
+[2025-02-15T01:20:19.552+0000] {processor.py:186} INFO - Started process (PID=93) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:20:19.553+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:20:19.555+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:20:19.554+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:20:19.559+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:20:19.558+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/sample_day.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample_day.py", line 8, in <module>
+    start_date=datetime(year=2024, month=2, day=14, hour=20, minute=0),
+               ^^^^^^^^
+NameError: name 'datetime' is not defined. Did you forget to import 'datetime'
+[2025-02-15T01:20:19.560+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:20:19.572+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.025 seconds
+[2025-02-15T01:20:30.823+0000] {processor.py:186} INFO - Started process (PID=94) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:20:30.824+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:20:30.827+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:20:30.826+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:20:30.834+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:20:30.832+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/sample_day.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample_day.py", line 8, in <module>
+    start_date=datetime(year=2024, month=2, day=14, hour=20, minute=0),
+               ^^^^^^^^
+NameError: name 'datetime' is not defined. Did you forget to import 'datetime'
+[2025-02-15T01:20:30.836+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:20:30.853+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.035 seconds
+[2025-02-15T01:21:01.238+0000] {processor.py:186} INFO - Started process (PID=95) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:21:01.240+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:21:01.247+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:21:01.246+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:21:01.255+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:21:01.254+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/sample_day.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample_day.py", line 9, in <module>
+    start_date=datetime(year=2024, month=2, day=14, hour=20, minute=0),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'module' object is not callable. Did you mean: 'datetime.datetime(...)'?
+[2025-02-15T01:21:01.255+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:21:01.271+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.042 seconds
+[2025-02-15T01:21:09.372+0000] {processor.py:186} INFO - Started process (PID=96) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:21:09.374+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:21:09.376+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:21:09.376+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:21:09.416+0000] {processor.py:925} INFO - DAG(s) 'etl_climate' retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:21:09.703+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:21:09.703+0000] {override.py:1911} INFO - Created Permission View: can read on DAG:etl_climate
+[2025-02-15T01:21:09.709+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:21:09.709+0000] {override.py:1911} INFO - Created Permission View: can edit on DAG:etl_climate
+[2025-02-15T01:21:09.713+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:21:09.713+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG:etl_climate
+[2025-02-15T01:21:09.721+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:21:09.721+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Run:etl_climate
+[2025-02-15T01:21:09.726+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:21:09.726+0000] {override.py:1911} INFO - Created Permission View: can create on DAG Run:etl_climate
+[2025-02-15T01:21:09.731+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:21:09.731+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG Run:etl_climate
+[2025-02-15T01:21:09.736+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:21:09.735+0000] {override.py:1911} INFO - Created Permission View: menu access on DAG Run:etl_climate
+[2025-02-15T01:21:09.736+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:21:09.736+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-15T01:21:09.742+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:21:09.741+0000] {dag.py:3262} INFO - Creating ORM DAG for etl_climate
+[2025-02-15T01:21:09.746+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:21:09.746+0000] {dag.py:4180} INFO - Setting next_dagrun for etl_climate to 2024-02-15 00:00:00+00:00, run_after=2024-02-16 00:00:00+00:00
+[2025-02-15T01:21:09.758+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.395 seconds
+[2025-02-15T01:21:40.582+0000] {processor.py:186} INFO - Started process (PID=97) to work on /opt/airflow/dags/sample_day.py
+[2025-02-15T01:21:40.584+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/sample_day.py for tasks to queue
+[2025-02-15T01:21:40.585+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:21:40.585+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:21:40.615+0000] {processor.py:925} INFO - DAG(s) 'etl_climate' retrieved from /opt/airflow/dags/sample_day.py
+[2025-02-15T01:21:40.639+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:21:40.639+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-15T01:21:40.664+0000] {logging_mixin.py:190} INFO - [2025-02-15T01:21:40.664+0000] {dag.py:4180} INFO - Setting next_dagrun for etl_climate to 2024-02-15 00:00:00+00:00, run_after=2024-02-16 00:00:00+00:00
+[2025-02-15T01:21:40.877+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/sample_day.py took 0.304 seconds

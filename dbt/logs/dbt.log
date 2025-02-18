@@ -7941,3 +7941,1533 @@ drop table if exists "database_name"."main"."open_meteo_raw_data__dbt_backup" ca
 [0m16:52:41.550187 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10311c2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103416190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b1b580>]}
 [0m16:52:41.550394 [debug] [MainThread]: Flushing usage events
 [0m16:52:41.728180 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:29:11.701134 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1030c0250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103f52f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103f52bb0>]}
+
+
+============================== 20:29:11.704568 | b32ac691-52cc-4d1e-8f62-3377db390aec ==============================
+[0m20:29:11.704568 [info ] [MainThread]: Running with dbt=1.9.2
+[0m20:29:11.705016 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/ericliao/climate_elt/dbt/logs', 'fail_fast': 'False', 'profiles_dir': '.', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --profiles-dir . -s models/open_meteo_raw_data.sql', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:29:11.859335 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b32ac691-52cc-4d1e-8f62-3377db390aec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10343c8e0>]}
+[0m20:29:11.891134 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b32ac691-52cc-4d1e-8f62-3377db390aec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104026be0>]}
+[0m20:29:11.893220 [info ] [MainThread]: Registered adapter: duckdb=1.9.1
+[0m20:29:11.966801 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m20:29:12.069137 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:29:12.069419 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:29:12.105523 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b32ac691-52cc-4d1e-8f62-3377db390aec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104500130>]}
+[0m20:29:12.167398 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ericliao/climate_elt/dbt/target/manifest.json
+[0m20:29:12.168826 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ericliao/climate_elt/dbt/target/semantic_manifest.json
+[0m20:29:12.182159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b32ac691-52cc-4d1e-8f62-3377db390aec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10451a490>]}
+[0m20:29:12.182482 [info ] [MainThread]: Found 2 models, 28 data tests, 1 seed, 424 macros
+[0m20:29:12.182682 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b32ac691-52cc-4d1e-8f62-3377db390aec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1044c9280>]}
+[0m20:29:12.183670 [info ] [MainThread]: 
+[0m20:29:12.183862 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:29:12.184022 [info ] [MainThread]: 
+[0m20:29:12.184300 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m20:29:12.184752 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_database_name'
+[0m20:29:12.225403 [debug] [ThreadPool]: Using duckdb connection "list_database_name"
+[0m20:29:12.225653 [debug] [ThreadPool]: On list_database_name: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "list_database_name"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"database_name"'
+    
+  
+  
+[0m20:29:12.225812 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:29:12.261067 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "list_database_name"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"database_name"'
+    
+  
+  
+[0m20:29:12.261342 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m20:29:12.261807 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:29:12.261978 [debug] [MainThread]: Connection 'list_database_name' was properly closed.
+[0m20:29:12.262132 [info ] [MainThread]: 
+[0m20:29:12.262306 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.08 seconds (0.08s).
+[0m20:29:12.262582 [error] [MainThread]: Encountered an error:
+Runtime Error
+  IO Error: Could not set lock on file "/Users/ericliao/climate_elt/dbt/duck_db_files/database_name.duckdb": Conflicting lock is held in /opt/homebrew/Cellar/duckdb/1.2.0/bin/duckdb (PID 91659) by user ericliao. See also https://duckdb.org/docs/connect/concurrency
+[0m20:29:12.263889 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.6144329, "process_in_blocks": "0", "process_kernel_time": 0.218426, "process_mem_max_rss": "117227520", "process_out_blocks": "0", "process_user_time": 1.07141}
+[0m20:29:12.264120 [debug] [MainThread]: Command `dbt run` failed at 20:29:12.264072 after 0.61 seconds
+[0m20:29:12.264317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1030c0250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10460aac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1044c9a90>]}
+[0m20:29:12.264518 [debug] [MainThread]: Flushing usage events
+[0m20:29:12.516444 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:29:19.282988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073bc280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110c62f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110c62be0>]}
+
+
+============================== 20:29:19.286534 | 0301bbf7-ac73-468e-a132-18d0aac2cdf5 ==============================
+[0m20:29:19.286534 [info ] [MainThread]: Running with dbt=1.9.2
+[0m20:29:19.287075 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '.', 'log_path': '/Users/ericliao/climate_elt/dbt/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run --profiles-dir . -s models/open_meteo_raw_data.sql', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:29:19.417233 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0301bbf7-ac73-468e-a132-18d0aac2cdf5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110e404f0>]}
+[0m20:29:19.475926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0301bbf7-ac73-468e-a132-18d0aac2cdf5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e399d0>]}
+[0m20:29:19.480020 [info ] [MainThread]: Registered adapter: duckdb=1.9.1
+[0m20:29:19.560241 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m20:29:19.662997 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:29:19.663250 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:29:19.697201 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0301bbf7-ac73-468e-a132-18d0aac2cdf5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111d10130>]}
+[0m20:29:19.760885 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ericliao/climate_elt/dbt/target/manifest.json
+[0m20:29:19.762355 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ericliao/climate_elt/dbt/target/semantic_manifest.json
+[0m20:29:19.774609 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0301bbf7-ac73-468e-a132-18d0aac2cdf5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111d2a0a0>]}
+[0m20:29:19.774935 [info ] [MainThread]: Found 2 models, 28 data tests, 1 seed, 424 macros
+[0m20:29:19.775139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0301bbf7-ac73-468e-a132-18d0aac2cdf5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111bd9d30>]}
+[0m20:29:19.776190 [info ] [MainThread]: 
+[0m20:29:19.776396 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:29:19.776591 [info ] [MainThread]: 
+[0m20:29:19.776925 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m20:29:19.777424 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_database_name'
+[0m20:29:19.809890 [debug] [ThreadPool]: Using duckdb connection "list_database_name"
+[0m20:29:19.810150 [debug] [ThreadPool]: On list_database_name: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "list_database_name"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"database_name"'
+    
+  
+  
+[0m20:29:19.810310 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:29:19.898400 [debug] [ThreadPool]: SQL status: OK in 0.088 seconds
+[0m20:29:19.900099 [debug] [ThreadPool]: On list_database_name: Close
+[0m20:29:19.902077 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_database_name, now create_database_name_main)
+[0m20:29:19.902500 [debug] [ThreadPool]: Creating schema "database: "database_name"
+schema: "main"
+"
+[0m20:29:19.906931 [debug] [ThreadPool]: Using duckdb connection "create_database_name_main"
+[0m20:29:19.907125 [debug] [ThreadPool]: On create_database_name_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "create_database_name_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='database_name'
+        and type='sqlite'
+    
+  
+[0m20:29:19.907289 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:29:19.930006 [debug] [ThreadPool]: SQL status: OK in 0.023 seconds
+[0m20:29:19.931227 [debug] [ThreadPool]: Using duckdb connection "create_database_name_main"
+[0m20:29:19.931546 [debug] [ThreadPool]: On create_database_name_main: BEGIN
+[0m20:29:19.931810 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m20:29:19.931967 [debug] [ThreadPool]: Using duckdb connection "create_database_name_main"
+[0m20:29:19.932117 [debug] [ThreadPool]: On create_database_name_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "create_database_name_main"} */
+
+    
+    
+        create schema if not exists "database_name"."main"
+    
+[0m20:29:19.933656 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m20:29:19.934188 [debug] [ThreadPool]: On create_database_name_main: COMMIT
+[0m20:29:19.934371 [debug] [ThreadPool]: Using duckdb connection "create_database_name_main"
+[0m20:29:19.934527 [debug] [ThreadPool]: On create_database_name_main: COMMIT
+[0m20:29:19.934752 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m20:29:19.935777 [debug] [ThreadPool]: On create_database_name_main: Close
+[0m20:29:19.939855 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_database_name_main, now list_database_name_main)
+[0m20:29:19.947027 [debug] [ThreadPool]: Using duckdb connection "list_database_name_main"
+[0m20:29:19.947221 [debug] [ThreadPool]: On list_database_name_main: BEGIN
+[0m20:29:19.947373 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:29:19.973173 [debug] [ThreadPool]: SQL status: OK in 0.026 seconds
+[0m20:29:19.973420 [debug] [ThreadPool]: Using duckdb connection "list_database_name_main"
+[0m20:29:19.973588 [debug] [ThreadPool]: On list_database_name_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "list_database_name_main"} */
+select
+      'database_name' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'database_name'
+  
+[0m20:29:19.983005 [debug] [ThreadPool]: SQL status: OK in 0.009 seconds
+[0m20:29:19.983810 [debug] [ThreadPool]: On list_database_name_main: ROLLBACK
+[0m20:29:19.985070 [debug] [ThreadPool]: Failed to rollback 'list_database_name_main'
+[0m20:29:19.985252 [debug] [ThreadPool]: On list_database_name_main: Close
+[0m20:29:19.986605 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0301bbf7-ac73-468e-a132-18d0aac2cdf5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111d5e280>]}
+[0m20:29:19.986892 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:29:19.987051 [debug] [MainThread]: On master: BEGIN
+[0m20:29:19.987196 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:29:20.011678 [debug] [MainThread]: SQL status: OK in 0.024 seconds
+[0m20:29:20.011922 [debug] [MainThread]: On master: COMMIT
+[0m20:29:20.012080 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:29:20.012223 [debug] [MainThread]: On master: COMMIT
+[0m20:29:20.012407 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m20:29:20.012563 [debug] [MainThread]: On master: Close
+[0m20:29:20.013906 [debug] [Thread-1  ]: Began running node model.weather_dbt_project.open_meteo_raw_data
+[0m20:29:20.014202 [info ] [Thread-1  ]: 1 of 1 START sql table model main.open_meteo_raw_data .......................... [RUN]
+[0m20:29:20.014505 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_database_name_main, now model.weather_dbt_project.open_meteo_raw_data)
+[0m20:29:20.014728 [debug] [Thread-1  ]: Began compiling node model.weather_dbt_project.open_meteo_raw_data
+[0m20:29:20.020220 [debug] [Thread-1  ]: Writing injected SQL for node "model.weather_dbt_project.open_meteo_raw_data"
+[0m20:29:20.021167 [debug] [Thread-1  ]: Began executing node model.weather_dbt_project.open_meteo_raw_data
+[0m20:29:20.036652 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m20:29:20.036892 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: BEGIN
+[0m20:29:20.037075 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:29:20.060308 [debug] [Thread-1  ]: SQL status: OK in 0.023 seconds
+[0m20:29:20.060614 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m20:29:20.060803 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "node_id": "model.weather_dbt_project.open_meteo_raw_data"} */
+
+        INSTALL http_client FROM community;
+      
+[0m20:29:20.061437 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m20:29:20.062199 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m20:29:20.062416 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "node_id": "model.weather_dbt_project.open_meteo_raw_data"} */
+
+        LOAD http_client;
+      
+[0m20:29:20.087114 [debug] [Thread-1  ]: SQL status: OK in 0.024 seconds
+[0m20:29:20.092552 [debug] [Thread-1  ]: Writing runtime sql for node "model.weather_dbt_project.open_meteo_raw_data"
+[0m20:29:20.093187 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m20:29:20.093450 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "node_id": "model.weather_dbt_project.open_meteo_raw_data"} */
+
+  
+    
+    
+
+    create  table
+      "database_name"."main"."open_meteo_raw_data__dbt_tmp"
+  
+    as (
+      -- models/open_meteo_raw_data.sql
+
+
+
+-- GET Request Example w/ JSON Parsing
+WITH __input AS (
+  SELECT
+    http_get(
+        'https://archive-api.open-meteo.com/v1/archive',
+        headers => MAP {
+          'accept': 'application/json'
+        },
+        params => MAP {
+          'latitude':cities.latitude::string,
+          'longitude':cities.longitude::string,
+          'start_date':date_add(current_date, interval (-4) day)::date::string,
+          'end_date':date_add(current_date, interval (-2) day)::date::string,
+          'hourly':'temperature_2m,precipitation,rain,snowfall,surface_pressure,cloud_cover,wind_speed_10m,soil_temperature_0_to_7cm,soil_moisture_0_to_7cm',
+          'timezone':'America/New_York'
+        }
+    ) AS res,
+    cities.city
+from cities
+),
+cities as (
+  select 
+    *
+  from
+    "database_name"."main"."cities_info"
+),
+cte as (
+  select 
+    (res->>'status')::int as status,
+    (res->>'reason') as reason,
+    (res->>'body')::json as res2,
+    city
+  from
+    __input
+),
+__response AS (
+  SELECT
+    status,
+    reason,
+    city,
+    (res2->>'latitude')::float AS latitude,
+    (res2->>'longitude')::float AS longitude,
+    (res2->>'generationtime_ms')::float AS generationtime_ms,
+    (res2->>'utc_offset_seconds')::int AS utc_offset_seconds,
+    (res2->>'timezone')::string AS timezone,
+    (res2->>'timezone_abbreviation')::string AS timezone_abbreviation,
+    (res2->>'elevation')::int AS elevation,
+    (res2->'hourly_units')::map(string, string) AS hourly_units,
+    unnest((res2->'hourly'->'time')::timestamp[]) as time,
+    unnest((res2->'hourly'->'temperature_2m')::float[]) as temperature_2m,
+    unnest((res2->'hourly'->'precipitation')::float[]) as precipitation,
+    unnest((res2->'hourly'->'rain')::float[]) as rain,
+    unnest((res2->'hourly'->'snowfall')::float[]) as snowfall,
+    unnest((res2->'hourly'->'surface_pressure')::float[]) as surface_pressure,
+    unnest((res2->'hourly'->'cloud_cover')::float[]) as cloud_cover,
+    unnest((res2->'hourly'->'wind_speed_10m')::float[]) as wind_speed_10m,
+    unnest((res2->'hourly'->'soil_temperature_0_to_7cm')::float[]) as soil_temperature_0_to_7cm,
+    unnest((res2->'hourly'->'soil_moisture_0_to_7cm')::float[]) as soil_moisture_0_to_7cm
+  FROM
+    cte
+
+)
+SELECT
+  *
+FROM
+  __response
+    );
+  
+  
+[0m20:29:45.655280 [debug] [Thread-1  ]: SQL status: OK in 25.561 seconds
+[0m20:29:45.661162 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m20:29:45.661456 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "node_id": "model.weather_dbt_project.open_meteo_raw_data"} */
+alter table "database_name"."main"."open_meteo_raw_data" rename to "open_meteo_raw_data__dbt_backup"
+[0m20:29:45.662555 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m20:29:45.664697 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m20:29:45.664933 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "node_id": "model.weather_dbt_project.open_meteo_raw_data"} */
+alter table "database_name"."main"."open_meteo_raw_data__dbt_tmp" rename to "open_meteo_raw_data"
+[0m20:29:45.665265 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m20:29:45.668628 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m20:29:45.668869 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "node_id": "model.weather_dbt_project.open_meteo_raw_data"} */
+
+        insert or ignore into weather_accumulation_data by name (select * exclude (status, reason) from "database_name"."main"."open_meteo_raw_data")
+      
+[0m20:29:45.681561 [debug] [Thread-1  ]: SQL status: OK in 0.012 seconds
+[0m20:29:45.688780 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: COMMIT
+[0m20:29:45.688999 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m20:29:45.689185 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: COMMIT
+[0m20:29:45.696834 [debug] [Thread-1  ]: SQL status: OK in 0.007 seconds
+[0m20:29:45.700583 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m20:29:45.700793 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "node_id": "model.weather_dbt_project.open_meteo_raw_data"} */
+drop table if exists "database_name"."main"."open_meteo_raw_data__dbt_backup" cascade
+[0m20:29:45.701247 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m20:29:45.702704 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: Close
+[0m20:29:45.736265 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0301bbf7-ac73-468e-a132-18d0aac2cdf5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1062a4910>]}
+[0m20:29:45.736748 [info ] [Thread-1  ]: 1 of 1 OK created sql table model main.open_meteo_raw_data ..................... [[32mOK[0m in 25.72s]
+[0m20:29:45.737084 [debug] [Thread-1  ]: Finished running node model.weather_dbt_project.open_meteo_raw_data
+[0m20:29:45.737811 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:29:45.738004 [debug] [MainThread]: On master: BEGIN
+[0m20:29:45.738153 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:29:45.761696 [debug] [MainThread]: SQL status: OK in 0.023 seconds
+[0m20:29:45.761944 [debug] [MainThread]: On master: COMMIT
+[0m20:29:45.762099 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:29:45.762237 [debug] [MainThread]: On master: COMMIT
+[0m20:29:45.762416 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m20:29:45.762562 [debug] [MainThread]: On master: Close
+[0m20:29:45.763352 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:29:45.763496 [debug] [MainThread]: Connection 'model.weather_dbt_project.open_meteo_raw_data' was properly closed.
+[0m20:29:45.763667 [info ] [MainThread]: 
+[0m20:29:45.763834 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 25.99 seconds (25.99s).
+[0m20:29:45.764210 [debug] [MainThread]: Command end result
+[0m20:29:45.806940 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ericliao/climate_elt/dbt/target/manifest.json
+[0m20:29:45.808070 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ericliao/climate_elt/dbt/target/semantic_manifest.json
+[0m20:29:45.811667 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/ericliao/climate_elt/dbt/target/run_results.json
+[0m20:29:45.811836 [info ] [MainThread]: 
+[0m20:29:45.812054 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:29:45.812213 [info ] [MainThread]: 
+[0m20:29:45.812380 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m20:29:45.813348 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 26.579298, "process_in_blocks": "0", "process_kernel_time": 0.494554, "process_mem_max_rss": "192643072", "process_out_blocks": "0", "process_user_time": 2.980001}
+[0m20:29:45.813544 [debug] [MainThread]: Command `dbt run` succeeded at 20:29:45.813502 after 26.58 seconds
+[0m20:29:45.813733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073bc280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107538be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110f9b3a0>]}
+[0m20:29:45.813916 [debug] [MainThread]: Flushing usage events
+[0m20:29:45.908485 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:34:26.515634 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10554c1f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ce2f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ce2040>]}
+
+
+============================== 10:34:26.519074 | e5d59dec-714f-45a2-87b8-45789d2638d2 ==============================
+[0m10:34:26.519074 [info ] [MainThread]: Running with dbt=1.9.2
+[0m10:34:26.519414 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '.', 'log_path': '/Users/ericliao/climate_elt/dbt/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt compile --profiles-dir . -s models/open_meteo_raw_data.sql', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:34:26.663993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e5d59dec-714f-45a2-87b8-45789d2638d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103c61a00>]}
+[0m10:34:26.695028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e5d59dec-714f-45a2-87b8-45789d2638d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105eb8a90>]}
+[0m10:34:26.697046 [info ] [MainThread]: Registered adapter: duckdb=1.9.1
+[0m10:34:26.778785 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m10:34:26.881105 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:34:26.881398 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:34:26.917343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e5d59dec-714f-45a2-87b8-45789d2638d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074a6130>]}
+[0m10:34:26.978685 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ericliao/climate_elt/dbt/target/manifest.json
+[0m10:34:26.980151 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ericliao/climate_elt/dbt/target/semantic_manifest.json
+[0m10:34:26.992777 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e5d59dec-714f-45a2-87b8-45789d2638d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107467070>]}
+[0m10:34:26.993101 [info ] [MainThread]: Found 2 models, 28 data tests, 1 seed, 424 macros
+[0m10:34:26.993298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e5d59dec-714f-45a2-87b8-45789d2638d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10746d430>]}
+[0m10:34:26.994565 [info ] [MainThread]: 
+[0m10:34:26.994766 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:34:26.994920 [info ] [MainThread]: 
+[0m10:34:26.995203 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m10:34:26.998211 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_database_name_main'
+[0m10:34:27.039902 [debug] [ThreadPool]: Using duckdb connection "list_database_name_main"
+[0m10:34:27.040239 [debug] [ThreadPool]: On list_database_name_main: BEGIN
+[0m10:34:27.040486 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:34:27.070661 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: BEGIN
+[0m10:34:27.070927 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m10:34:27.071379 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:34:27.071560 [debug] [MainThread]: Connection 'list_database_name_main' was properly closed.
+[0m10:34:27.071835 [error] [MainThread]: Encountered an error:
+Runtime Error
+  IO Error: Could not set lock on file "/Users/ericliao/climate_elt/dbt/duck_db_files/database_name.duckdb": Conflicting lock is held in /opt/homebrew/Cellar/duckdb/1.2.0/bin/duckdb (PID 95658) by user ericliao. See also https://duckdb.org/docs/connect/concurrency
+[0m10:34:27.073140 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.604726, "process_in_blocks": "0", "process_kernel_time": 0.199777, "process_mem_max_rss": "116670464", "process_out_blocks": "0", "process_user_time": 1.059266}
+[0m10:34:27.073383 [debug] [MainThread]: Command `dbt compile` failed at 10:34:27.073328 after 0.61 seconds
+[0m10:34:27.073588 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10554c1f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074c0c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107467400>]}
+[0m10:34:27.073801 [debug] [MainThread]: Flushing usage events
+[0m10:34:27.284595 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:34:45.716611 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075bc2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110f72130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110f72460>]}
+
+
+============================== 10:34:45.719122 | d632386a-82c8-44ea-bd3d-cdce685400ae ==============================
+[0m10:34:45.719122 [info ] [MainThread]: Running with dbt=1.9.2
+[0m10:34:45.719454 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '.', 'log_path': '/Users/ericliao/climate_elt/dbt/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt compile --profiles-dir . -s models/open_meteo_raw_data.sql', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m10:34:45.842039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd632386a-82c8-44ea-bd3d-cdce685400ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1110661f0>]}
+[0m10:34:45.874120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd632386a-82c8-44ea-bd3d-cdce685400ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11106f9d0>]}
+[0m10:34:45.875984 [info ] [MainThread]: Registered adapter: duckdb=1.9.1
+[0m10:34:45.943813 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m10:34:46.026281 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:34:46.026507 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:34:46.062412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd632386a-82c8-44ea-bd3d-cdce685400ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111711130>]}
+[0m10:34:46.120776 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ericliao/climate_elt/dbt/target/manifest.json
+[0m10:34:46.121773 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ericliao/climate_elt/dbt/target/semantic_manifest.json
+[0m10:34:46.128493 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd632386a-82c8-44ea-bd3d-cdce685400ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111755490>]}
+[0m10:34:46.128794 [info ] [MainThread]: Found 2 models, 28 data tests, 1 seed, 424 macros
+[0m10:34:46.128987 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd632386a-82c8-44ea-bd3d-cdce685400ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1116d9b20>]}
+[0m10:34:46.130177 [info ] [MainThread]: 
+[0m10:34:46.130371 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:34:46.130525 [info ] [MainThread]: 
+[0m10:34:46.130803 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m10:34:46.133729 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_database_name_main'
+[0m10:34:46.161946 [debug] [ThreadPool]: Using duckdb connection "list_database_name_main"
+[0m10:34:46.162205 [debug] [ThreadPool]: On list_database_name_main: BEGIN
+[0m10:34:46.162360 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:34:46.228567 [debug] [ThreadPool]: SQL status: OK in 0.066 seconds
+[0m10:34:46.228858 [debug] [ThreadPool]: Using duckdb connection "list_database_name_main"
+[0m10:34:46.229026 [debug] [ThreadPool]: On list_database_name_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "list_database_name_main"} */
+select
+      'database_name' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'database_name'
+  
+[0m10:34:46.239769 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m10:34:46.240841 [debug] [ThreadPool]: On list_database_name_main: ROLLBACK
+[0m10:34:46.242095 [debug] [ThreadPool]: Failed to rollback 'list_database_name_main'
+[0m10:34:46.242258 [debug] [ThreadPool]: On list_database_name_main: Close
+[0m10:34:46.244221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd632386a-82c8-44ea-bd3d-cdce685400ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1116d3f40>]}
+[0m10:34:46.245698 [debug] [Thread-1  ]: Began running node model.weather_dbt_project.open_meteo_raw_data
+[0m10:34:46.245932 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_database_name_main, now model.weather_dbt_project.open_meteo_raw_data)
+[0m10:34:46.246111 [debug] [Thread-1  ]: Began compiling node model.weather_dbt_project.open_meteo_raw_data
+[0m10:34:46.251392 [debug] [Thread-1  ]: Writing injected SQL for node "model.weather_dbt_project.open_meteo_raw_data"
+[0m10:34:46.252174 [debug] [Thread-1  ]: Began executing node model.weather_dbt_project.open_meteo_raw_data
+[0m10:34:46.252539 [debug] [Thread-1  ]: Finished running node model.weather_dbt_project.open_meteo_raw_data
+[0m10:34:46.253060 [debug] [Thread-1  ]: Began running node test.weather_dbt_project.not_null_open_meteo_raw_data_cloud_cover.fe08df391d
+[0m10:34:46.253288 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.weather_dbt_project.open_meteo_raw_data, now test.weather_dbt_project.not_null_open_meteo_raw_data_cloud_cover.fe08df391d)
+[0m10:34:46.253467 [debug] [Thread-1  ]: Began compiling node test.weather_dbt_project.not_null_open_meteo_raw_data_cloud_cover.fe08df391d
+[0m10:34:46.260508 [debug] [Thread-1  ]: Writing injected SQL for node "test.weather_dbt_project.not_null_open_meteo_raw_data_cloud_cover.fe08df391d"
+[0m10:34:46.260950 [debug] [Thread-1  ]: Began executing node test.weather_dbt_project.not_null_open_meteo_raw_data_cloud_cover.fe08df391d
+[0m10:34:46.261300 [debug] [Thread-1  ]: Finished running node test.weather_dbt_project.not_null_open_meteo_raw_data_cloud_cover.fe08df391d
+[0m10:34:46.261498 [debug] [Thread-1  ]: Began running node test.weather_dbt_project.not_null_open_meteo_raw_data_elevation.195219705f
+[0m10:34:46.261716 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.weather_dbt_project.not_null_open_meteo_raw_data_cloud_cover.fe08df391d, now test.weather_dbt_project.not_null_open_meteo_raw_data_elevation.195219705f)
+[0m10:34:46.261895 [debug] [Thread-1  ]: Began compiling node test.weather_dbt_project.not_null_open_meteo_raw_data_elevation.195219705f
+[0m10:34:46.264186 [debug] [Thread-1  ]: Writing injected SQL for node "test.weather_dbt_project.not_null_open_meteo_raw_data_elevation.195219705f"
+[0m10:34:46.264526 [debug] [Thread-1  ]: Began executing node test.weather_dbt_project.not_null_open_meteo_raw_data_elevation.195219705f
+[0m10:34:46.264869 [debug] [Thread-1  ]: Finished running node test.weather_dbt_project.not_null_open_meteo_raw_data_elevation.195219705f
+[0m10:34:46.265062 [debug] [Thread-1  ]: Began running node test.weather_dbt_project.not_null_open_meteo_raw_data_evapotranspiration.9697b1cfc4
+[0m10:34:46.265299 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.weather_dbt_project.not_null_open_meteo_raw_data_elevation.195219705f, now test.weather_dbt_project.not_null_open_meteo_raw_data_evapotranspiration.9697b1cfc4)
+[0m10:34:46.265523 [debug] [Thread-1  ]: Began compiling node test.weather_dbt_project.not_null_open_meteo_raw_data_evapotranspiration.9697b1cfc4
+[0m10:34:46.267890 [debug] [Thread-1  ]: Writing injected SQL for node "test.weather_dbt_project.not_null_open_meteo_raw_data_evapotranspiration.9697b1cfc4"
+[0m10:34:46.268262 [debug] [Thread-1  ]: Began executing node test.weather_dbt_project.not_null_open_meteo_raw_data_evapotranspiration.9697b1cfc4
+[0m10:34:46.268621 [debug] [Thread-1  ]: Finished running node test.weather_dbt_project.not_null_open_meteo_raw_data_evapotranspiration.9697b1cfc4
+[0m10:34:46.268828 [debug] [Thread-1  ]: Began running node test.weather_dbt_project.not_null_open_meteo_raw_data_generationtime_ms.6218df90f4
+[0m10:34:46.269055 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.weather_dbt_project.not_null_open_meteo_raw_data_evapotranspiration.9697b1cfc4, now test.weather_dbt_project.not_null_open_meteo_raw_data_generationtime_ms.6218df90f4)
+[0m10:34:46.269246 [debug] [Thread-1  ]: Began compiling node test.weather_dbt_project.not_null_open_meteo_raw_data_generationtime_ms.6218df90f4
+[0m10:34:46.271467 [debug] [Thread-1  ]: Writing injected SQL for node "test.weather_dbt_project.not_null_open_meteo_raw_data_generationtime_ms.6218df90f4"
+[0m10:34:46.272709 [debug] [Thread-1  ]: Began executing node test.weather_dbt_project.not_null_open_meteo_raw_data_generationtime_ms.6218df90f4
+[0m10:34:46.273047 [debug] [Thread-1  ]: Finished running node test.weather_dbt_project.not_null_open_meteo_raw_data_generationtime_ms.6218df90f4
+[0m10:34:46.273241 [debug] [Thread-1  ]: Began running node test.weather_dbt_project.not_null_open_meteo_raw_data_hourly_units.6435309015
+[0m10:34:46.273466 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.weather_dbt_project.not_null_open_meteo_raw_data_generationtime_ms.6218df90f4, now test.weather_dbt_project.not_null_open_meteo_raw_data_hourly_units.6435309015)
+[0m10:34:46.273656 [debug] [Thread-1  ]: Began compiling node test.weather_dbt_project.not_null_open_meteo_raw_data_hourly_units.6435309015
+[0m10:34:46.275944 [debug] [Thread-1  ]: Writing injected SQL for node "test.weather_dbt_project.not_null_open_meteo_raw_data_hourly_units.6435309015"
+[0m10:34:46.278744 [debug] [Thread-1  ]: Began executing node test.weather_dbt_project.not_null_open_meteo_raw_data_hourly_units.6435309015
+[0m10:34:46.279077 [debug] [Thread-1  ]: Finished running node test.weather_dbt_project.not_null_open_meteo_raw_data_hourly_units.6435309015
+[0m10:34:46.279272 [debug] [Thread-1  ]: Began running node test.weather_dbt_project.not_null_open_meteo_raw_data_latitude.25e53e36b2
+[0m10:34:46.279479 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.weather_dbt_project.not_null_open_meteo_raw_data_hourly_units.6435309015, now test.weather_dbt_project.not_null_open_meteo_raw_data_latitude.25e53e36b2)
+[0m10:34:46.279662 [debug] [Thread-1  ]: Began compiling node test.weather_dbt_project.not_null_open_meteo_raw_data_latitude.25e53e36b2
+[0m10:34:46.282291 [debug] [Thread-1  ]: Writing injected SQL for node "test.weather_dbt_project.not_null_open_meteo_raw_data_latitude.25e53e36b2"
+[0m10:34:46.282874 [debug] [Thread-1  ]: Began executing node test.weather_dbt_project.not_null_open_meteo_raw_data_latitude.25e53e36b2
+[0m10:34:46.283219 [debug] [Thread-1  ]: Finished running node test.weather_dbt_project.not_null_open_meteo_raw_data_latitude.25e53e36b2
+[0m10:34:46.283410 [debug] [Thread-1  ]: Began running node test.weather_dbt_project.not_null_open_meteo_raw_data_longitude.cc86e83b4f
+[0m10:34:46.283615 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.weather_dbt_project.not_null_open_meteo_raw_data_latitude.25e53e36b2, now test.weather_dbt_project.not_null_open_meteo_raw_data_longitude.cc86e83b4f)
+[0m10:34:46.283794 [debug] [Thread-1  ]: Began compiling node test.weather_dbt_project.not_null_open_meteo_raw_data_longitude.cc86e83b4f
+[0m10:34:46.285991 [debug] [Thread-1  ]: Writing injected SQL for node "test.weather_dbt_project.not_null_open_meteo_raw_data_longitude.cc86e83b4f"
+[0m10:34:46.286297 [debug] [Thread-1  ]: Began executing node test.weather_dbt_project.not_null_open_meteo_raw_data_longitude.cc86e83b4f
+[0m10:34:46.286624 [debug] [Thread-1  ]: Finished running node test.weather_dbt_project.not_null_open_meteo_raw_data_longitude.cc86e83b4f
+[0m10:34:46.286807 [debug] [Thread-1  ]: Began running node test.weather_dbt_project.not_null_open_meteo_raw_data_precipitation.7adc9490a2
+[0m10:34:46.287010 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.weather_dbt_project.not_null_open_meteo_raw_data_longitude.cc86e83b4f, now test.weather_dbt_project.not_null_open_meteo_raw_data_precipitation.7adc9490a2)
+[0m10:34:46.287185 [debug] [Thread-1  ]: Began compiling node test.weather_dbt_project.not_null_open_meteo_raw_data_precipitation.7adc9490a2
+[0m10:34:46.290032 [debug] [Thread-1  ]: Writing injected SQL for node "test.weather_dbt_project.not_null_open_meteo_raw_data_precipitation.7adc9490a2"
+[0m10:34:46.290354 [debug] [Thread-1  ]: Began executing node test.weather_dbt_project.not_null_open_meteo_raw_data_precipitation.7adc9490a2
+[0m10:34:46.290684 [debug] [Thread-1  ]: Finished running node test.weather_dbt_project.not_null_open_meteo_raw_data_precipitation.7adc9490a2
+[0m10:34:46.290870 [debug] [Thread-1  ]: Began running node test.weather_dbt_project.not_null_open_meteo_raw_data_rain.10719ff9ab
+[0m10:34:46.291071 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.weather_dbt_project.not_null_open_meteo_raw_data_precipitation.7adc9490a2, now test.weather_dbt_project.not_null_open_meteo_raw_data_rain.10719ff9ab)
+[0m10:34:46.291245 [debug] [Thread-1  ]: Began compiling node test.weather_dbt_project.not_null_open_meteo_raw_data_rain.10719ff9ab
+[0m10:34:46.293435 [debug] [Thread-1  ]: Writing injected SQL for node "test.weather_dbt_project.not_null_open_meteo_raw_data_rain.10719ff9ab"
+[0m10:34:46.293734 [debug] [Thread-1  ]: Began executing node test.weather_dbt_project.not_null_open_meteo_raw_data_rain.10719ff9ab
+[0m10:34:46.294058 [debug] [Thread-1  ]: Finished running node test.weather_dbt_project.not_null_open_meteo_raw_data_rain.10719ff9ab
+[0m10:34:46.294242 [debug] [Thread-1  ]: Began running node test.weather_dbt_project.not_null_open_meteo_raw_data_snowfall.4a87ea8245
+[0m10:34:46.294444 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.weather_dbt_project.not_null_open_meteo_raw_data_rain.10719ff9ab, now test.weather_dbt_project.not_null_open_meteo_raw_data_snowfall.4a87ea8245)
+[0m10:34:46.294617 [debug] [Thread-1  ]: Began compiling node test.weather_dbt_project.not_null_open_meteo_raw_data_snowfall.4a87ea8245
+[0m10:34:46.296726 [debug] [Thread-1  ]: Writing injected SQL for node "test.weather_dbt_project.not_null_open_meteo_raw_data_snowfall.4a87ea8245"
+[0m10:34:46.297038 [debug] [Thread-1  ]: Began executing node test.weather_dbt_project.not_null_open_meteo_raw_data_snowfall.4a87ea8245
+[0m10:34:46.297364 [debug] [Thread-1  ]: Finished running node test.weather_dbt_project.not_null_open_meteo_raw_data_snowfall.4a87ea8245
+[0m10:34:46.297548 [debug] [Thread-1  ]: Began running node test.weather_dbt_project.not_null_open_meteo_raw_data_soil_moisture_0_to_1cm.b78e1c9a02
+[0m10:34:46.297751 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.weather_dbt_project.not_null_open_meteo_raw_data_snowfall.4a87ea8245, now test.weather_dbt_project.not_null_open_meteo_raw_data_soil_moisture_0_to_1cm.b78e1c9a02)
+[0m10:34:46.297926 [debug] [Thread-1  ]: Began compiling node test.weather_dbt_project.not_null_open_meteo_raw_data_soil_moisture_0_to_1cm.b78e1c9a02
+[0m10:34:46.300092 [debug] [Thread-1  ]: Writing injected SQL for node "test.weather_dbt_project.not_null_open_meteo_raw_data_soil_moisture_0_to_1cm.b78e1c9a02"
+[0m10:34:46.300389 [debug] [Thread-1  ]: Began executing node test.weather_dbt_project.not_null_open_meteo_raw_data_soil_moisture_0_to_1cm.b78e1c9a02
+[0m10:34:46.300718 [debug] [Thread-1  ]: Finished running node test.weather_dbt_project.not_null_open_meteo_raw_data_soil_moisture_0_to_1cm.b78e1c9a02
+[0m10:34:46.300901 [debug] [Thread-1  ]: Began running node test.weather_dbt_project.not_null_open_meteo_raw_data_soil_temperature_0cm.04c13d5f25
+[0m10:34:46.301103 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.weather_dbt_project.not_null_open_meteo_raw_data_soil_moisture_0_to_1cm.b78e1c9a02, now test.weather_dbt_project.not_null_open_meteo_raw_data_soil_temperature_0cm.04c13d5f25)
+[0m10:34:46.301277 [debug] [Thread-1  ]: Began compiling node test.weather_dbt_project.not_null_open_meteo_raw_data_soil_temperature_0cm.04c13d5f25
+[0m10:34:46.303452 [debug] [Thread-1  ]: Writing injected SQL for node "test.weather_dbt_project.not_null_open_meteo_raw_data_soil_temperature_0cm.04c13d5f25"
+[0m10:34:46.303747 [debug] [Thread-1  ]: Began executing node test.weather_dbt_project.not_null_open_meteo_raw_data_soil_temperature_0cm.04c13d5f25
+[0m10:34:46.304071 [debug] [Thread-1  ]: Finished running node test.weather_dbt_project.not_null_open_meteo_raw_data_soil_temperature_0cm.04c13d5f25
+[0m10:34:46.304255 [debug] [Thread-1  ]: Began running node test.weather_dbt_project.not_null_open_meteo_raw_data_surface_pressure.c06a62e230
+[0m10:34:46.304457 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.weather_dbt_project.not_null_open_meteo_raw_data_soil_temperature_0cm.04c13d5f25, now test.weather_dbt_project.not_null_open_meteo_raw_data_surface_pressure.c06a62e230)
+[0m10:34:46.304631 [debug] [Thread-1  ]: Began compiling node test.weather_dbt_project.not_null_open_meteo_raw_data_surface_pressure.c06a62e230
+[0m10:34:46.306736 [debug] [Thread-1  ]: Writing injected SQL for node "test.weather_dbt_project.not_null_open_meteo_raw_data_surface_pressure.c06a62e230"
+[0m10:34:46.307039 [debug] [Thread-1  ]: Began executing node test.weather_dbt_project.not_null_open_meteo_raw_data_surface_pressure.c06a62e230
+[0m10:34:46.307365 [debug] [Thread-1  ]: Finished running node test.weather_dbt_project.not_null_open_meteo_raw_data_surface_pressure.c06a62e230
+[0m10:34:46.307549 [debug] [Thread-1  ]: Began running node test.weather_dbt_project.not_null_open_meteo_raw_data_temperature_2m.f6ce87953b
+[0m10:34:46.307749 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.weather_dbt_project.not_null_open_meteo_raw_data_surface_pressure.c06a62e230, now test.weather_dbt_project.not_null_open_meteo_raw_data_temperature_2m.f6ce87953b)
+[0m10:34:46.307921 [debug] [Thread-1  ]: Began compiling node test.weather_dbt_project.not_null_open_meteo_raw_data_temperature_2m.f6ce87953b
+[0m10:34:46.310083 [debug] [Thread-1  ]: Writing injected SQL for node "test.weather_dbt_project.not_null_open_meteo_raw_data_temperature_2m.f6ce87953b"
+[0m10:34:46.310373 [debug] [Thread-1  ]: Began executing node test.weather_dbt_project.not_null_open_meteo_raw_data_temperature_2m.f6ce87953b
+[0m10:34:46.310694 [debug] [Thread-1  ]: Finished running node test.weather_dbt_project.not_null_open_meteo_raw_data_temperature_2m.f6ce87953b
+[0m10:34:46.310872 [debug] [Thread-1  ]: Began running node test.weather_dbt_project.not_null_open_meteo_raw_data_time.4405026b0f
+[0m10:34:46.311070 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.weather_dbt_project.not_null_open_meteo_raw_data_temperature_2m.f6ce87953b, now test.weather_dbt_project.not_null_open_meteo_raw_data_time.4405026b0f)
+[0m10:34:46.311240 [debug] [Thread-1  ]: Began compiling node test.weather_dbt_project.not_null_open_meteo_raw_data_time.4405026b0f
+[0m10:34:46.340760 [debug] [Thread-1  ]: Writing injected SQL for node "test.weather_dbt_project.not_null_open_meteo_raw_data_time.4405026b0f"
+[0m10:34:46.341531 [debug] [Thread-1  ]: Began executing node test.weather_dbt_project.not_null_open_meteo_raw_data_time.4405026b0f
+[0m10:34:46.342141 [debug] [Thread-1  ]: Finished running node test.weather_dbt_project.not_null_open_meteo_raw_data_time.4405026b0f
+[0m10:34:46.342354 [debug] [Thread-1  ]: Began running node test.weather_dbt_project.not_null_open_meteo_raw_data_timezone.b884039d6f
+[0m10:34:46.342562 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.weather_dbt_project.not_null_open_meteo_raw_data_time.4405026b0f, now test.weather_dbt_project.not_null_open_meteo_raw_data_timezone.b884039d6f)
+[0m10:34:46.342839 [debug] [Thread-1  ]: Began compiling node test.weather_dbt_project.not_null_open_meteo_raw_data_timezone.b884039d6f
+[0m10:34:46.345872 [debug] [Thread-1  ]: Writing injected SQL for node "test.weather_dbt_project.not_null_open_meteo_raw_data_timezone.b884039d6f"
+[0m10:34:46.346286 [debug] [Thread-1  ]: Began executing node test.weather_dbt_project.not_null_open_meteo_raw_data_timezone.b884039d6f
+[0m10:34:46.346652 [debug] [Thread-1  ]: Finished running node test.weather_dbt_project.not_null_open_meteo_raw_data_timezone.b884039d6f
+[0m10:34:46.346850 [debug] [Thread-1  ]: Began running node test.weather_dbt_project.not_null_open_meteo_raw_data_timezone_abbreviation.01dac382e5
+[0m10:34:46.347151 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.weather_dbt_project.not_null_open_meteo_raw_data_timezone.b884039d6f, now test.weather_dbt_project.not_null_open_meteo_raw_data_timezone_abbreviation.01dac382e5)
+[0m10:34:46.347440 [debug] [Thread-1  ]: Began compiling node test.weather_dbt_project.not_null_open_meteo_raw_data_timezone_abbreviation.01dac382e5
+[0m10:34:46.350001 [debug] [Thread-1  ]: Writing injected SQL for node "test.weather_dbt_project.not_null_open_meteo_raw_data_timezone_abbreviation.01dac382e5"
+[0m10:34:46.350480 [debug] [Thread-1  ]: Began executing node test.weather_dbt_project.not_null_open_meteo_raw_data_timezone_abbreviation.01dac382e5
+[0m10:34:46.350911 [debug] [Thread-1  ]: Finished running node test.weather_dbt_project.not_null_open_meteo_raw_data_timezone_abbreviation.01dac382e5
+[0m10:34:46.351136 [debug] [Thread-1  ]: Began running node test.weather_dbt_project.not_null_open_meteo_raw_data_utc_offset_seconds.8471795184
+[0m10:34:46.351384 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.weather_dbt_project.not_null_open_meteo_raw_data_timezone_abbreviation.01dac382e5, now test.weather_dbt_project.not_null_open_meteo_raw_data_utc_offset_seconds.8471795184)
+[0m10:34:46.351575 [debug] [Thread-1  ]: Began compiling node test.weather_dbt_project.not_null_open_meteo_raw_data_utc_offset_seconds.8471795184
+[0m10:34:46.354154 [debug] [Thread-1  ]: Writing injected SQL for node "test.weather_dbt_project.not_null_open_meteo_raw_data_utc_offset_seconds.8471795184"
+[0m10:34:46.354561 [debug] [Thread-1  ]: Began executing node test.weather_dbt_project.not_null_open_meteo_raw_data_utc_offset_seconds.8471795184
+[0m10:34:46.354935 [debug] [Thread-1  ]: Finished running node test.weather_dbt_project.not_null_open_meteo_raw_data_utc_offset_seconds.8471795184
+[0m10:34:46.355143 [debug] [Thread-1  ]: Began running node test.weather_dbt_project.not_null_open_meteo_raw_data_wind_speed_10m.b90a553c86
+[0m10:34:46.355366 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.weather_dbt_project.not_null_open_meteo_raw_data_utc_offset_seconds.8471795184, now test.weather_dbt_project.not_null_open_meteo_raw_data_wind_speed_10m.b90a553c86)
+[0m10:34:46.355552 [debug] [Thread-1  ]: Began compiling node test.weather_dbt_project.not_null_open_meteo_raw_data_wind_speed_10m.b90a553c86
+[0m10:34:46.358196 [debug] [Thread-1  ]: Writing injected SQL for node "test.weather_dbt_project.not_null_open_meteo_raw_data_wind_speed_10m.b90a553c86"
+[0m10:34:46.358541 [debug] [Thread-1  ]: Began executing node test.weather_dbt_project.not_null_open_meteo_raw_data_wind_speed_10m.b90a553c86
+[0m10:34:46.358866 [debug] [Thread-1  ]: Finished running node test.weather_dbt_project.not_null_open_meteo_raw_data_wind_speed_10m.b90a553c86
+[0m10:34:46.359373 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:34:46.359600 [debug] [MainThread]: Connection 'test.weather_dbt_project.not_null_open_meteo_raw_data_wind_speed_10m.b90a553c86' was properly closed.
+[0m10:34:46.361267 [debug] [MainThread]: Command end result
+[0m10:34:46.378177 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ericliao/climate_elt/dbt/target/manifest.json
+[0m10:34:46.379058 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ericliao/climate_elt/dbt/target/semantic_manifest.json
+[0m10:34:46.384291 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/ericliao/climate_elt/dbt/target/run_results.json
+[0m10:34:46.384544 [debug] [MainThread]: Excluded node 'not_null_open_meteo_raw_data_cloud_cover' from results
+[0m10:34:46.384693 [debug] [MainThread]: Excluded node 'not_null_open_meteo_raw_data_elevation' from results
+[0m10:34:46.384822 [debug] [MainThread]: Excluded node 'not_null_open_meteo_raw_data_evapotranspiration' from results
+[0m10:34:46.384944 [debug] [MainThread]: Excluded node 'not_null_open_meteo_raw_data_generationtime_ms' from results
+[0m10:34:46.385070 [debug] [MainThread]: Excluded node 'not_null_open_meteo_raw_data_hourly_units' from results
+[0m10:34:46.385193 [debug] [MainThread]: Excluded node 'not_null_open_meteo_raw_data_latitude' from results
+[0m10:34:46.385313 [debug] [MainThread]: Excluded node 'not_null_open_meteo_raw_data_longitude' from results
+[0m10:34:46.385429 [debug] [MainThread]: Excluded node 'not_null_open_meteo_raw_data_precipitation' from results
+[0m10:34:46.385553 [debug] [MainThread]: Excluded node 'not_null_open_meteo_raw_data_rain' from results
+[0m10:34:46.385672 [debug] [MainThread]: Excluded node 'not_null_open_meteo_raw_data_snowfall' from results
+[0m10:34:46.385789 [debug] [MainThread]: Excluded node 'not_null_open_meteo_raw_data_soil_moisture_0_to_1cm' from results
+[0m10:34:46.385911 [debug] [MainThread]: Excluded node 'not_null_open_meteo_raw_data_soil_temperature_0cm' from results
+[0m10:34:46.386028 [debug] [MainThread]: Excluded node 'not_null_open_meteo_raw_data_surface_pressure' from results
+[0m10:34:46.386150 [debug] [MainThread]: Excluded node 'not_null_open_meteo_raw_data_temperature_2m' from results
+[0m10:34:46.386267 [debug] [MainThread]: Excluded node 'not_null_open_meteo_raw_data_time' from results
+[0m10:34:46.386384 [debug] [MainThread]: Excluded node 'not_null_open_meteo_raw_data_timezone' from results
+[0m10:34:46.386499 [debug] [MainThread]: Excluded node 'not_null_open_meteo_raw_data_timezone_abbreviation' from results
+[0m10:34:46.386618 [debug] [MainThread]: Excluded node 'not_null_open_meteo_raw_data_utc_offset_seconds' from results
+[0m10:34:46.386733 [debug] [MainThread]: Excluded node 'not_null_open_meteo_raw_data_wind_speed_10m' from results
+[0m10:34:46.386951 [info ] [MainThread]: Compiled node 'open_meteo_raw_data' is:
+-- models/open_meteo_raw_data.sql
+
+
+
+-- GET Request Example w/ JSON Parsing
+WITH __input AS (
+  SELECT
+    http_get(
+        'https://archive-api.open-meteo.com/v1/archive',
+        headers => MAP {
+          'accept': 'application/json'
+        },
+        params => MAP {
+          'latitude':cities.latitude::string,
+          'longitude':cities.longitude::string,
+          'start_date':date_add(current_date, interval (-4) day)::date::string,
+          'end_date':date_add(current_date, interval (-2) day)::date::string,
+          'hourly':'temperature_2m,precipitation,rain,snowfall,surface_pressure,cloud_cover,wind_speed_10m,soil_temperature_0_to_7cm,soil_moisture_0_to_7cm',
+          'timezone':'America/New_York'
+        }
+    ) AS res,
+    cities.city
+from cities
+),
+cities as (
+  select 
+    *
+  from
+    "database_name"."main"."cities_info"
+),
+cte as (
+  select 
+    (res->>'status')::int as status,
+    (res->>'reason') as reason,
+    (res->>'body')::json as res2,
+    city
+  from
+    __input
+),
+__response AS (
+  SELECT
+    status,
+    reason,
+    city,
+    (res2->>'latitude')::float AS latitude,
+    (res2->>'longitude')::float AS longitude,
+    (res2->>'generationtime_ms')::float AS generationtime_ms,
+    (res2->>'utc_offset_seconds')::int AS utc_offset_seconds,
+    (res2->>'timezone')::string AS timezone,
+    (res2->>'timezone_abbreviation')::string AS timezone_abbreviation,
+    (res2->>'elevation')::int AS elevation,
+    (res2->'hourly_units')::map(string, string) AS hourly_units,
+    unnest((res2->'hourly'->'time')::timestamp[]) as time,
+    unnest((res2->'hourly'->'temperature_2m')::float[]) as temperature_2m,
+    unnest((res2->'hourly'->'precipitation')::float[]) as precipitation,
+    unnest((res2->'hourly'->'rain')::float[]) as rain,
+    unnest((res2->'hourly'->'snowfall')::float[]) as snowfall,
+    unnest((res2->'hourly'->'surface_pressure')::float[]) as surface_pressure,
+    unnest((res2->'hourly'->'cloud_cover')::float[]) as cloud_cover,
+    unnest((res2->'hourly'->'wind_speed_10m')::float[]) as wind_speed_10m,
+    unnest((res2->'hourly'->'soil_temperature_0_to_7cm')::float[]) as soil_temperature_0_to_7cm,
+    unnest((res2->'hourly'->'soil_moisture_0_to_7cm')::float[]) as soil_moisture_0_to_7cm
+  FROM
+    cte
+
+)
+SELECT
+  *
+FROM
+  __response
+[0m10:34:46.387949 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 0.71673864, "process_in_blocks": "0", "process_kernel_time": 0.194842, "process_mem_max_rss": "134004736", "process_out_blocks": "0", "process_user_time": 1.30177}
+[0m10:34:46.388161 [debug] [MainThread]: Command `dbt compile` succeeded at 10:34:46.388116 after 0.72 seconds
+[0m10:34:46.388359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075bc2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1116d38e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1116d3ca0>]}
+[0m10:34:46.388559 [debug] [MainThread]: Flushing usage events
+[0m10:34:46.501931 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:43:17.226057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1037481c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1045e7100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1045e7f40>]}
+
+
+============================== 10:43:17.229293 | 50067f6d-0412-464b-9266-494307291b55 ==============================
+[0m10:43:17.229293 [info ] [MainThread]: Running with dbt=1.9.2
+[0m10:43:17.229625 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/ericliao/climate_elt/dbt/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/ericliao/climate_elt/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt seed', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:43:17.367691 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '50067f6d-0412-464b-9266-494307291b55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1046f9820>]}
+[0m10:43:17.398871 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '50067f6d-0412-464b-9266-494307291b55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1045b9c40>]}
+[0m10:43:17.400935 [info ] [MainThread]: Registered adapter: duckdb=1.9.1
+[0m10:43:17.473760 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m10:43:17.575564 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m10:43:17.575995 [debug] [MainThread]: Partial parsing: updated file: weather_dbt_project://models/open_meteo_raw_data.sql
+[0m10:43:17.827009 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '50067f6d-0412-464b-9266-494307291b55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e9ff10>]}
+[0m10:43:17.886169 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ericliao/climate_elt/dbt/target/manifest.json
+[0m10:43:17.887643 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ericliao/climate_elt/dbt/target/semantic_manifest.json
+[0m10:43:17.929559 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '50067f6d-0412-464b-9266-494307291b55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b48bb0>]}
+[0m10:43:17.929917 [info ] [MainThread]: Found 2 models, 28 data tests, 1 seed, 424 macros
+[0m10:43:17.930112 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '50067f6d-0412-464b-9266-494307291b55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ea1c40>]}
+[0m10:43:17.931097 [info ] [MainThread]: 
+[0m10:43:17.931294 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:43:17.931456 [info ] [MainThread]: 
+[0m10:43:17.931710 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m10:43:17.932168 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_database_name'
+[0m10:43:17.972068 [debug] [ThreadPool]: Using duckdb connection "list_database_name"
+[0m10:43:17.972331 [debug] [ThreadPool]: On list_database_name: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "list_database_name"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"database_name"'
+    
+  
+  
+[0m10:43:17.972489 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:43:18.087123 [debug] [ThreadPool]: SQL status: OK in 0.115 seconds
+[0m10:43:18.088438 [debug] [ThreadPool]: On list_database_name: Close
+[0m10:43:18.089979 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_database_name, now create_database_name_main)
+[0m10:43:18.090280 [debug] [ThreadPool]: Creating schema "database: "database_name"
+schema: "main"
+"
+[0m10:43:18.094427 [debug] [ThreadPool]: Using duckdb connection "create_database_name_main"
+[0m10:43:18.094615 [debug] [ThreadPool]: On create_database_name_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "create_database_name_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='database_name'
+        and type='sqlite'
+    
+  
+[0m10:43:18.094777 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:43:18.117591 [debug] [ThreadPool]: SQL status: OK in 0.023 seconds
+[0m10:43:18.118588 [debug] [ThreadPool]: Using duckdb connection "create_database_name_main"
+[0m10:43:18.118757 [debug] [ThreadPool]: On create_database_name_main: BEGIN
+[0m10:43:18.118960 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m10:43:18.119110 [debug] [ThreadPool]: Using duckdb connection "create_database_name_main"
+[0m10:43:18.119259 [debug] [ThreadPool]: On create_database_name_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "create_database_name_main"} */
+
+    
+    
+        create schema if not exists "database_name"."main"
+    
+[0m10:43:18.120179 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m10:43:18.120662 [debug] [ThreadPool]: On create_database_name_main: COMMIT
+[0m10:43:18.120824 [debug] [ThreadPool]: Using duckdb connection "create_database_name_main"
+[0m10:43:18.120968 [debug] [ThreadPool]: On create_database_name_main: COMMIT
+[0m10:43:18.121148 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m10:43:18.121300 [debug] [ThreadPool]: On create_database_name_main: Close
+[0m10:43:18.125208 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_database_name_main, now list_database_name_main)
+[0m10:43:18.129192 [debug] [ThreadPool]: Using duckdb connection "list_database_name_main"
+[0m10:43:18.129370 [debug] [ThreadPool]: On list_database_name_main: BEGIN
+[0m10:43:18.129512 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:43:18.153177 [debug] [ThreadPool]: SQL status: OK in 0.024 seconds
+[0m10:43:18.153429 [debug] [ThreadPool]: Using duckdb connection "list_database_name_main"
+[0m10:43:18.153593 [debug] [ThreadPool]: On list_database_name_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "list_database_name_main"} */
+select
+      'database_name' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'database_name'
+  
+[0m10:43:18.164619 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m10:43:18.165440 [debug] [ThreadPool]: On list_database_name_main: ROLLBACK
+[0m10:43:18.166753 [debug] [ThreadPool]: Failed to rollback 'list_database_name_main'
+[0m10:43:18.166926 [debug] [ThreadPool]: On list_database_name_main: Close
+[0m10:43:18.167979 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '50067f6d-0412-464b-9266-494307291b55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104556850>]}
+[0m10:43:18.168305 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:43:18.168465 [debug] [MainThread]: On master: BEGIN
+[0m10:43:18.168609 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:43:18.191907 [debug] [MainThread]: SQL status: OK in 0.023 seconds
+[0m10:43:18.192165 [debug] [MainThread]: On master: COMMIT
+[0m10:43:18.192326 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:43:18.192473 [debug] [MainThread]: On master: COMMIT
+[0m10:43:18.192655 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m10:43:18.192804 [debug] [MainThread]: On master: Close
+[0m10:43:18.194150 [debug] [Thread-1  ]: Began running node seed.weather_dbt_project.cities_info
+[0m10:43:18.194474 [info ] [Thread-1  ]: 1 of 1 START seed file main.cities_info ........................................ [RUN]
+[0m10:43:18.194765 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_database_name_main, now seed.weather_dbt_project.cities_info)
+[0m10:43:18.194962 [debug] [Thread-1  ]: Began compiling node seed.weather_dbt_project.cities_info
+[0m10:43:18.195145 [debug] [Thread-1  ]: Began executing node seed.weather_dbt_project.cities_info
+[0m10:43:18.211960 [debug] [Thread-1  ]: Using duckdb connection "seed.weather_dbt_project.cities_info"
+[0m10:43:18.212183 [debug] [Thread-1  ]: On seed.weather_dbt_project.cities_info: BEGIN
+[0m10:43:18.212359 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m10:43:18.238466 [debug] [Thread-1  ]: SQL status: OK in 0.026 seconds
+[0m10:43:18.238778 [debug] [Thread-1  ]: Using duckdb connection "seed.weather_dbt_project.cities_info"
+[0m10:43:18.238972 [debug] [Thread-1  ]: On seed.weather_dbt_project.cities_info: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "node_id": "seed.weather_dbt_project.cities_info"} */
+
+    create table "database_name"."main"."cities_info" ("city" text,"latitude" float8,"longitude" float8)
+  
+[0m10:43:18.242063 [debug] [Thread-1  ]: SQL status: OK in 0.003 seconds
+[0m10:43:18.249160 [debug] [Thread-1  ]: Using duckdb connection "seed.weather_dbt_project.cities_info"
+[0m10:43:18.249397 [debug] [Thread-1  ]: On seed.weather_dbt_project.cities_info: 
+          COPY "database_name"."main"."cities_info" FROM '/Users/ericliao/climate_elt/dbt/seeds/cities_info.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m10:43:18.256477 [debug] [Thread-1  ]: SQL status: OK in 0.007 seconds
+[0m10:43:18.259697 [debug] [Thread-1  ]: Writing runtime SQL for node "seed.weather_dbt_project.cities_info"
+[0m10:43:18.267461 [debug] [Thread-1  ]: On seed.weather_dbt_project.cities_info: COMMIT
+[0m10:43:18.267679 [debug] [Thread-1  ]: Using duckdb connection "seed.weather_dbt_project.cities_info"
+[0m10:43:18.267852 [debug] [Thread-1  ]: On seed.weather_dbt_project.cities_info: COMMIT
+[0m10:43:18.269230 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m10:43:18.270327 [debug] [Thread-1  ]: On seed.weather_dbt_project.cities_info: Close
+[0m10:43:18.275707 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '50067f6d-0412-464b-9266-494307291b55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b55eb0>]}
+[0m10:43:18.276022 [info ] [Thread-1  ]: 1 of 1 OK loaded seed file main.cities_info .................................... [[32mINSERT 50[0m in 0.08s]
+[0m10:43:18.276327 [debug] [Thread-1  ]: Finished running node seed.weather_dbt_project.cities_info
+[0m10:43:18.276918 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:43:18.277090 [debug] [MainThread]: On master: BEGIN
+[0m10:43:18.277230 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:43:18.299373 [debug] [MainThread]: SQL status: OK in 0.022 seconds
+[0m10:43:18.299624 [debug] [MainThread]: On master: COMMIT
+[0m10:43:18.299777 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:43:18.299919 [debug] [MainThread]: On master: COMMIT
+[0m10:43:18.300103 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m10:43:18.300253 [debug] [MainThread]: On master: Close
+[0m10:43:18.301005 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:43:18.301172 [debug] [MainThread]: Connection 'seed.weather_dbt_project.cities_info' was properly closed.
+[0m10:43:18.301338 [info ] [MainThread]: 
+[0m10:43:18.301506 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 0.37 seconds (0.37s).
+[0m10:43:18.301859 [debug] [MainThread]: Command end result
+[0m10:43:18.317708 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ericliao/climate_elt/dbt/target/manifest.json
+[0m10:43:18.318575 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ericliao/climate_elt/dbt/target/semantic_manifest.json
+[0m10:43:18.322097 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/ericliao/climate_elt/dbt/target/run_results.json
+[0m10:43:18.322266 [info ] [MainThread]: 
+[0m10:43:18.322485 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:43:18.322648 [info ] [MainThread]: 
+[0m10:43:18.322818 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m10:43:18.324147 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 1.1481736, "process_in_blocks": "0", "process_kernel_time": 0.353172, "process_mem_max_rss": "142704640", "process_out_blocks": "0", "process_user_time": 2.119362}
+[0m10:43:18.324356 [debug] [MainThread]: Command `dbt seed` succeeded at 10:43:18.324313 after 1.15 seconds
+[0m10:43:18.324557 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1037481c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104208280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1046f9820>]}
+[0m10:43:18.324751 [debug] [MainThread]: Flushing usage events
+[0m10:43:18.525099 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:45:21.499487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102a94280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103934100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103934400>]}
+
+
+============================== 10:45:21.502526 | b2855925-44b7-42cf-9047-08991d8f57a3 ==============================
+[0m10:45:21.502526 [info ] [MainThread]: Running with dbt=1.9.2
+[0m10:45:21.502890 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/ericliao/climate_elt/dbt', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/ericliao/climate_elt/dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt seed', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m10:45:21.637481 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b2855925-44b7-42cf-9047-08991d8f57a3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102c142b0>]}
+[0m10:45:21.668524 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b2855925-44b7-42cf-9047-08991d8f57a3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1039f7b80>]}
+[0m10:45:21.671072 [info ] [MainThread]: Registered adapter: duckdb=1.9.1
+[0m10:45:21.741245 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m10:45:21.811948 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m10:45:21.812266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'b2855925-44b7-42cf-9047-08991d8f57a3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1033b6af0>]}
+[0m10:45:22.582118 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b2855925-44b7-42cf-9047-08991d8f57a3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104260130>]}
+[0m10:45:22.637500 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ericliao/climate_elt/dbt/target/manifest.json
+[0m10:45:22.638594 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ericliao/climate_elt/dbt/target/semantic_manifest.json
+[0m10:45:22.649985 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b2855925-44b7-42cf-9047-08991d8f57a3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10426fd00>]}
+[0m10:45:22.650271 [info ] [MainThread]: Found 2 models, 1 seed, 28 data tests, 424 macros
+[0m10:45:22.650459 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b2855925-44b7-42cf-9047-08991d8f57a3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104260760>]}
+[0m10:45:22.651378 [info ] [MainThread]: 
+[0m10:45:22.651566 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:45:22.651718 [info ] [MainThread]: 
+[0m10:45:22.651970 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m10:45:22.652419 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_open_weather_database'
+[0m10:45:22.686902 [debug] [ThreadPool]: Using duckdb connection "list_open_weather_database"
+[0m10:45:22.687188 [debug] [ThreadPool]: On list_open_weather_database: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "list_open_weather_database"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"open_weather_database"'
+    
+  
+  
+[0m10:45:22.687357 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:45:22.768955 [debug] [ThreadPool]: SQL status: OK in 0.082 seconds
+[0m10:45:22.769898 [debug] [ThreadPool]: On list_open_weather_database: Close
+[0m10:45:22.771465 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_open_weather_database, now create_open_weather_database_main)
+[0m10:45:22.771813 [debug] [ThreadPool]: Creating schema "database: "open_weather_database"
+schema: "main"
+"
+[0m10:45:22.776288 [debug] [ThreadPool]: Using duckdb connection "create_open_weather_database_main"
+[0m10:45:22.776539 [debug] [ThreadPool]: On create_open_weather_database_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "create_open_weather_database_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='open_weather_database'
+        and type='sqlite'
+    
+  
+[0m10:45:22.776712 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:45:22.799826 [debug] [ThreadPool]: SQL status: OK in 0.023 seconds
+[0m10:45:22.800939 [debug] [ThreadPool]: Using duckdb connection "create_open_weather_database_main"
+[0m10:45:22.801133 [debug] [ThreadPool]: On create_open_weather_database_main: BEGIN
+[0m10:45:22.801353 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m10:45:22.801499 [debug] [ThreadPool]: Using duckdb connection "create_open_weather_database_main"
+[0m10:45:22.801644 [debug] [ThreadPool]: On create_open_weather_database_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "create_open_weather_database_main"} */
+
+    
+    
+        create schema if not exists "open_weather_database"."main"
+    
+[0m10:45:22.802116 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m10:45:22.802549 [debug] [ThreadPool]: On create_open_weather_database_main: COMMIT
+[0m10:45:22.802702 [debug] [ThreadPool]: Using duckdb connection "create_open_weather_database_main"
+[0m10:45:22.802838 [debug] [ThreadPool]: On create_open_weather_database_main: COMMIT
+[0m10:45:22.803020 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m10:45:22.803166 [debug] [ThreadPool]: On create_open_weather_database_main: Close
+[0m10:45:22.807075 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_open_weather_database_main, now list_open_weather_database_main)
+[0m10:45:22.810712 [debug] [ThreadPool]: Using duckdb connection "list_open_weather_database_main"
+[0m10:45:22.810893 [debug] [ThreadPool]: On list_open_weather_database_main: BEGIN
+[0m10:45:22.811045 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:45:22.834895 [debug] [ThreadPool]: SQL status: OK in 0.024 seconds
+[0m10:45:22.835160 [debug] [ThreadPool]: Using duckdb connection "list_open_weather_database_main"
+[0m10:45:22.835328 [debug] [ThreadPool]: On list_open_weather_database_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "list_open_weather_database_main"} */
+select
+      'open_weather_database' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'open_weather_database'
+  
+[0m10:45:22.843594 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m10:45:22.844396 [debug] [ThreadPool]: On list_open_weather_database_main: ROLLBACK
+[0m10:45:22.845668 [debug] [ThreadPool]: Failed to rollback 'list_open_weather_database_main'
+[0m10:45:22.845848 [debug] [ThreadPool]: On list_open_weather_database_main: Close
+[0m10:45:22.846873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b2855925-44b7-42cf-9047-08991d8f57a3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104356dc0>]}
+[0m10:45:22.847163 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:45:22.847320 [debug] [MainThread]: On master: BEGIN
+[0m10:45:22.847455 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:45:22.870999 [debug] [MainThread]: SQL status: OK in 0.023 seconds
+[0m10:45:22.871265 [debug] [MainThread]: On master: COMMIT
+[0m10:45:22.871431 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:45:22.871582 [debug] [MainThread]: On master: COMMIT
+[0m10:45:22.871769 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m10:45:22.871920 [debug] [MainThread]: On master: Close
+[0m10:45:22.873230 [debug] [Thread-1  ]: Began running node seed.weather_dbt_project.cities_info
+[0m10:45:22.873602 [info ] [Thread-1  ]: 1 of 1 START seed file main.cities_info ........................................ [RUN]
+[0m10:45:22.873873 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_open_weather_database_main, now seed.weather_dbt_project.cities_info)
+[0m10:45:22.874072 [debug] [Thread-1  ]: Began compiling node seed.weather_dbt_project.cities_info
+[0m10:45:22.874245 [debug] [Thread-1  ]: Began executing node seed.weather_dbt_project.cities_info
+[0m10:45:22.890813 [debug] [Thread-1  ]: Using duckdb connection "seed.weather_dbt_project.cities_info"
+[0m10:45:22.891034 [debug] [Thread-1  ]: On seed.weather_dbt_project.cities_info: BEGIN
+[0m10:45:22.891209 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m10:45:22.914427 [debug] [Thread-1  ]: SQL status: OK in 0.023 seconds
+[0m10:45:22.914719 [debug] [Thread-1  ]: Using duckdb connection "seed.weather_dbt_project.cities_info"
+[0m10:45:22.914905 [debug] [Thread-1  ]: On seed.weather_dbt_project.cities_info: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "node_id": "seed.weather_dbt_project.cities_info"} */
+
+    create table "open_weather_database"."main"."cities_info" ("city" text,"latitude" float8,"longitude" float8)
+  
+[0m10:45:22.916318 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m10:45:22.923686 [debug] [Thread-1  ]: Using duckdb connection "seed.weather_dbt_project.cities_info"
+[0m10:45:22.923896 [debug] [Thread-1  ]: On seed.weather_dbt_project.cities_info: 
+          COPY "open_weather_database"."main"."cities_info" FROM '/Users/ericliao/climate_elt/dbt/seeds/cities_info.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m10:45:22.928108 [debug] [Thread-1  ]: SQL status: OK in 0.004 seconds
+[0m10:45:22.931283 [debug] [Thread-1  ]: Writing runtime SQL for node "seed.weather_dbt_project.cities_info"
+[0m10:45:22.969949 [debug] [Thread-1  ]: On seed.weather_dbt_project.cities_info: COMMIT
+[0m10:45:22.970280 [debug] [Thread-1  ]: Using duckdb connection "seed.weather_dbt_project.cities_info"
+[0m10:45:22.970477 [debug] [Thread-1  ]: On seed.weather_dbt_project.cities_info: COMMIT
+[0m10:45:22.971818 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m10:45:22.973050 [debug] [Thread-1  ]: On seed.weather_dbt_project.cities_info: Close
+[0m10:45:22.977331 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b2855925-44b7-42cf-9047-08991d8f57a3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10468d3a0>]}
+[0m10:45:22.977729 [info ] [Thread-1  ]: 1 of 1 OK loaded seed file main.cities_info .................................... [[32mINSERT 50[0m in 0.10s]
+[0m10:45:22.978083 [debug] [Thread-1  ]: Finished running node seed.weather_dbt_project.cities_info
+[0m10:45:22.978739 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:45:22.978979 [debug] [MainThread]: On master: BEGIN
+[0m10:45:22.979133 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:45:23.006839 [debug] [MainThread]: SQL status: OK in 0.028 seconds
+[0m10:45:23.007116 [debug] [MainThread]: On master: COMMIT
+[0m10:45:23.007278 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:45:23.007421 [debug] [MainThread]: On master: COMMIT
+[0m10:45:23.007645 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m10:45:23.007803 [debug] [MainThread]: On master: Close
+[0m10:45:23.008657 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:45:23.008868 [debug] [MainThread]: Connection 'seed.weather_dbt_project.cities_info' was properly closed.
+[0m10:45:23.009030 [info ] [MainThread]: 
+[0m10:45:23.009197 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 0.36 seconds (0.36s).
+[0m10:45:23.009667 [debug] [MainThread]: Command end result
+[0m10:45:23.026328 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ericliao/climate_elt/dbt/target/manifest.json
+[0m10:45:23.027267 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ericliao/climate_elt/dbt/target/semantic_manifest.json
+[0m10:45:23.031256 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/ericliao/climate_elt/dbt/target/run_results.json
+[0m10:45:23.031503 [info ] [MainThread]: 
+[0m10:45:23.031733 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:45:23.031891 [info ] [MainThread]: 
+[0m10:45:23.032068 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m10:45:23.033107 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 1.5776752, "process_in_blocks": "0", "process_kernel_time": 0.308047, "process_mem_max_rss": "151977984", "process_out_blocks": "0", "process_user_time": 2.620349}
+[0m10:45:23.033325 [debug] [MainThread]: Command `dbt seed` succeeded at 10:45:23.033277 after 1.58 seconds
+[0m10:45:23.033531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102a94280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102b9cc40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1041982b0>]}
+[0m10:45:23.033733 [debug] [MainThread]: Flushing usage events
+[0m10:45:23.250812 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:13:13.746356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076fc280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10859f100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10859f430>]}
+
+
+============================== 11:13:13.750746 | 98261c98-3111-4577-9298-414fa2538fba ==============================
+[0m11:13:13.750746 [info ] [MainThread]: Running with dbt=1.9.2
+[0m11:13:13.751481 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/ericliao/climate_elt/dbt/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --profiles-dir . -s models/open_meteo_raw_data.sql', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:13:13.902326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '98261c98-3111-4577-9298-414fa2538fba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10866e4f0>]}
+[0m11:13:13.935745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '98261c98-3111-4577-9298-414fa2538fba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1080619d0>]}
+[0m11:13:13.938230 [info ] [MainThread]: Registered adapter: duckdb=1.9.1
+[0m11:13:14.020344 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m11:13:14.125386 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:13:14.125694 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:13:14.162329 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '98261c98-3111-4577-9298-414fa2538fba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10964f130>]}
+[0m11:13:14.223122 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ericliao/climate_elt/dbt/target/manifest.json
+[0m11:13:14.224498 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ericliao/climate_elt/dbt/target/semantic_manifest.json
+[0m11:13:14.240099 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '98261c98-3111-4577-9298-414fa2538fba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1096775b0>]}
+[0m11:13:14.240483 [info ] [MainThread]: Found 2 models, 1 seed, 28 data tests, 424 macros
+[0m11:13:14.240693 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '98261c98-3111-4577-9298-414fa2538fba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109603400>]}
+[0m11:13:14.241738 [info ] [MainThread]: 
+[0m11:13:14.241944 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:13:14.242088 [info ] [MainThread]: 
+[0m11:13:14.242388 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m11:13:14.242942 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_open_weather_database'
+[0m11:13:14.285444 [debug] [ThreadPool]: Using duckdb connection "list_open_weather_database"
+[0m11:13:14.285726 [debug] [ThreadPool]: On list_open_weather_database: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "list_open_weather_database"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"open_weather_database"'
+    
+  
+  
+[0m11:13:14.285893 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:13:14.406768 [debug] [ThreadPool]: SQL status: OK in 0.121 seconds
+[0m11:13:14.408172 [debug] [ThreadPool]: On list_open_weather_database: Close
+[0m11:13:14.410067 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_open_weather_database, now create_open_weather_database_main)
+[0m11:13:14.410408 [debug] [ThreadPool]: Creating schema "database: "open_weather_database"
+schema: "main"
+"
+[0m11:13:14.414813 [debug] [ThreadPool]: Using duckdb connection "create_open_weather_database_main"
+[0m11:13:14.415023 [debug] [ThreadPool]: On create_open_weather_database_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "create_open_weather_database_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='open_weather_database'
+        and type='sqlite'
+    
+  
+[0m11:13:14.415184 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:13:14.441863 [debug] [ThreadPool]: SQL status: OK in 0.027 seconds
+[0m11:13:14.443032 [debug] [ThreadPool]: Using duckdb connection "create_open_weather_database_main"
+[0m11:13:14.443222 [debug] [ThreadPool]: On create_open_weather_database_main: BEGIN
+[0m11:13:14.443483 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:13:14.443634 [debug] [ThreadPool]: Using duckdb connection "create_open_weather_database_main"
+[0m11:13:14.443787 [debug] [ThreadPool]: On create_open_weather_database_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "create_open_weather_database_main"} */
+
+    
+    
+        create schema if not exists "open_weather_database"."main"
+    
+[0m11:13:14.444517 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m11:13:14.445025 [debug] [ThreadPool]: On create_open_weather_database_main: COMMIT
+[0m11:13:14.445192 [debug] [ThreadPool]: Using duckdb connection "create_open_weather_database_main"
+[0m11:13:14.445341 [debug] [ThreadPool]: On create_open_weather_database_main: COMMIT
+[0m11:13:14.445569 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:13:14.445729 [debug] [ThreadPool]: On create_open_weather_database_main: Close
+[0m11:13:14.449685 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_open_weather_database_main, now list_open_weather_database_main)
+[0m11:13:14.453825 [debug] [ThreadPool]: Using duckdb connection "list_open_weather_database_main"
+[0m11:13:14.454025 [debug] [ThreadPool]: On list_open_weather_database_main: BEGIN
+[0m11:13:14.454171 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:13:14.480520 [debug] [ThreadPool]: SQL status: OK in 0.026 seconds
+[0m11:13:14.480784 [debug] [ThreadPool]: Using duckdb connection "list_open_weather_database_main"
+[0m11:13:14.480948 [debug] [ThreadPool]: On list_open_weather_database_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "list_open_weather_database_main"} */
+select
+      'open_weather_database' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'open_weather_database'
+  
+[0m11:13:14.492530 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m11:13:14.493458 [debug] [ThreadPool]: On list_open_weather_database_main: ROLLBACK
+[0m11:13:14.494836 [debug] [ThreadPool]: Failed to rollback 'list_open_weather_database_main'
+[0m11:13:14.495042 [debug] [ThreadPool]: On list_open_weather_database_main: Close
+[0m11:13:14.496342 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '98261c98-3111-4577-9298-414fa2538fba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10969f160>]}
+[0m11:13:14.496676 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:13:14.496842 [debug] [MainThread]: On master: BEGIN
+[0m11:13:14.496983 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:13:14.526949 [debug] [MainThread]: SQL status: OK in 0.030 seconds
+[0m11:13:14.527211 [debug] [MainThread]: On master: COMMIT
+[0m11:13:14.527368 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:13:14.527509 [debug] [MainThread]: On master: COMMIT
+[0m11:13:14.527688 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m11:13:14.527847 [debug] [MainThread]: On master: Close
+[0m11:13:14.529257 [debug] [Thread-1  ]: Began running node model.weather_dbt_project.open_meteo_raw_data
+[0m11:13:14.529584 [info ] [Thread-1  ]: 1 of 1 START sql table model main.open_meteo_raw_data .......................... [RUN]
+[0m11:13:14.529837 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_open_weather_database_main, now model.weather_dbt_project.open_meteo_raw_data)
+[0m11:13:14.530029 [debug] [Thread-1  ]: Began compiling node model.weather_dbt_project.open_meteo_raw_data
+[0m11:13:14.535571 [debug] [Thread-1  ]: Writing injected SQL for node "model.weather_dbt_project.open_meteo_raw_data"
+[0m11:13:14.536410 [debug] [Thread-1  ]: Began executing node model.weather_dbt_project.open_meteo_raw_data
+[0m11:13:14.552514 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m11:13:14.552756 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: BEGIN
+[0m11:13:14.552928 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m11:13:14.583489 [debug] [Thread-1  ]: SQL status: OK in 0.030 seconds
+[0m11:13:14.583781 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m11:13:14.583966 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "node_id": "model.weather_dbt_project.open_meteo_raw_data"} */
+
+        INSTALL http_client FROM community;
+      
+[0m11:13:14.584594 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m11:13:14.585434 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m11:13:14.585674 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "node_id": "model.weather_dbt_project.open_meteo_raw_data"} */
+
+        LOAD http_client;
+      
+[0m11:13:14.609329 [debug] [Thread-1  ]: SQL status: OK in 0.023 seconds
+[0m11:13:14.615112 [debug] [Thread-1  ]: Writing runtime sql for node "model.weather_dbt_project.open_meteo_raw_data"
+[0m11:13:14.615843 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m11:13:14.616130 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "node_id": "model.weather_dbt_project.open_meteo_raw_data"} */
+
+  
+    
+    
+
+    create  table
+      "open_weather_database"."main"."open_meteo_raw_data__dbt_tmp"
+  
+    as (
+      -- models/open_meteo_raw_data.sql
+
+
+
+-- GET Request Example w/ JSON Parsing
+WITH __input AS (
+  SELECT
+    http_get(
+        'https://archive-api.open-meteo.com/v1/archive',
+        headers => MAP {
+          'accept': 'application/json'
+        },
+        params => MAP {
+          'latitude':cities.latitude::string,
+          'longitude':cities.longitude::string,
+          'start_date':date_add(current_date, interval (-4) day)::date::string,
+          'end_date':date_add(current_date, interval (-2) day)::date::string,
+          'hourly':'temperature_2m,precipitation,rain,snowfall,surface_pressure,cloud_cover,wind_speed_10m,soil_temperature_0_to_7cm,soil_moisture_0_to_7cm',
+          'timezone':'America/New_York'
+        }
+    ) AS res,
+    cities.city
+from cities
+),
+cities as (
+  select 
+    *
+  from
+    "open_weather_database"."main"."cities_info"
+),
+cte as (
+  select 
+    (res->>'status')::int as status,
+    (res->>'reason') as reason,
+    (res->>'body')::json as res2,
+    city
+  from
+    __input
+),
+__response AS (
+  SELECT
+    status,
+    reason,
+    city,
+    (res2->>'latitude')::float AS latitude,
+    (res2->>'longitude')::float AS longitude,
+    (res2->>'generationtime_ms')::float AS generationtime_ms,
+    (res2->>'utc_offset_seconds')::int AS utc_offset_seconds,
+    (res2->>'timezone')::string AS timezone,
+    (res2->>'timezone_abbreviation')::string AS timezone_abbreviation,
+    (res2->>'elevation')::int AS elevation,
+    (res2->'hourly_units')::map(string, string) AS hourly_units,
+    unnest((res2->'hourly'->'time')::timestamp[]) as time,
+    unnest((res2->'hourly'->'temperature_2m')::float[]) as temperature_2m,
+    unnest((res2->'hourly'->'precipitation')::float[]) as precipitation,
+    unnest((res2->'hourly'->'rain')::float[]) as rain,
+    unnest((res2->'hourly'->'snowfall')::float[]) as snowfall,
+    unnest((res2->'hourly'->'surface_pressure')::float[]) as surface_pressure,
+    unnest((res2->'hourly'->'cloud_cover')::float[]) as cloud_cover,
+    unnest((res2->'hourly'->'wind_speed_10m')::float[]) as wind_speed_10m,
+    unnest((res2->'hourly'->'soil_temperature_0_to_7cm')::float[]) as soil_temperature_0_to_7cm,
+    unnest((res2->'hourly'->'soil_moisture_0_to_7cm')::float[]) as soil_moisture_0_to_7cm
+  FROM
+    cte
+
+)
+SELECT
+  *
+FROM
+  __response;
+    );
+  
+  
+[0m11:13:14.619498 [debug] [Thread-1  ]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "node_id": "model.weather_dbt_project.open_meteo_raw_data"} */
+
+  
+    
+    
+
+    create  table
+      "open_weather_database"."main"."open_meteo_raw_data__dbt_tmp"
+  
+    as (
+      -- models/open_meteo_raw_data.sql
+
+
+
+-- GET Request Example w/ JSON Parsing
+WITH __input AS (
+  SELECT
+    http_get(
+        'https://archive-api.open-meteo.com/v1/archive',
+        headers => MAP {
+          'accept': 'application/json'
+        },
+        params => MAP {
+          'latitude':cities.latitude::string,
+          'longitude':cities.longitude::string,
+          'start_date':date_add(current_date, interval (-4) day)::date::string,
+          'end_date':date_add(current_date, interval (-2) day)::date::string,
+          'hourly':'temperature_2m,precipitation,rain,snowfall,surface_pressure,cloud_cover,wind_speed_10m,soil_temperature_0_to_7cm,soil_moisture_0_to_7cm',
+          'timezone':'America/New_York'
+        }
+    ) AS res,
+    cities.city
+from cities
+),
+cities as (
+  select 
+    *
+  from
+    "open_weather_database"."main"."cities_info"
+),
+cte as (
+  select 
+    (res->>'status')::int as status,
+    (res->>'reason') as reason,
+    (res->>'body')::json as res2,
+    city
+  from
+    __input
+),
+__response AS (
+  SELECT
+    status,
+    reason,
+    city,
+    (res2->>'latitude')::float AS latitude,
+    (res2->>'longitude')::float AS longitude,
+    (res2->>'generationtime_ms')::float AS generationtime_ms,
+    (res2->>'utc_offset_seconds')::int AS utc_offset_seconds,
+    (res2->>'timezone')::string AS timezone,
+    (res2->>'timezone_abbreviation')::string AS timezone_abbreviation,
+    (res2->>'elevation')::int AS elevation,
+    (res2->'hourly_units')::map(string, string) AS hourly_units,
+    unnest((res2->'hourly'->'time')::timestamp[]) as time,
+    unnest((res2->'hourly'->'temperature_2m')::float[]) as temperature_2m,
+    unnest((res2->'hourly'->'precipitation')::float[]) as precipitation,
+    unnest((res2->'hourly'->'rain')::float[]) as rain,
+    unnest((res2->'hourly'->'snowfall')::float[]) as snowfall,
+    unnest((res2->'hourly'->'surface_pressure')::float[]) as surface_pressure,
+    unnest((res2->'hourly'->'cloud_cover')::float[]) as cloud_cover,
+    unnest((res2->'hourly'->'wind_speed_10m')::float[]) as wind_speed_10m,
+    unnest((res2->'hourly'->'soil_temperature_0_to_7cm')::float[]) as soil_temperature_0_to_7cm,
+    unnest((res2->'hourly'->'soil_moisture_0_to_7cm')::float[]) as soil_moisture_0_to_7cm
+  FROM
+    cte
+
+)
+SELECT
+  *
+FROM
+  __response;
+    );
+  
+  
+[0m11:13:14.619837 [debug] [Thread-1  ]: DuckDB adapter: Rolling back transaction.
+[0m11:13:14.620117 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: ROLLBACK
+[0m11:13:14.635756 [debug] [Thread-1  ]: Failed to rollback 'model.weather_dbt_project.open_meteo_raw_data'
+[0m11:13:14.636020 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: Close
+[0m11:13:14.640286 [debug] [Thread-1  ]: Runtime Error in model open_meteo_raw_data (models/open_meteo_raw_data.sql)
+  Parser Error: syntax error at or near ";"
+[0m11:13:14.641782 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '98261c98-3111-4577-9298-414fa2538fba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ab0790>]}
+[0m11:13:14.642239 [error] [Thread-1  ]: 1 of 1 ERROR creating sql table model main.open_meteo_raw_data ................. [[31mERROR[0m in 0.11s]
+[0m11:13:14.642578 [debug] [Thread-1  ]: Finished running node model.weather_dbt_project.open_meteo_raw_data
+[0m11:13:14.642870 [debug] [Thread-4  ]: Marking all children of 'model.weather_dbt_project.open_meteo_raw_data' to be skipped because of status 'error'.  Reason: Runtime Error in model open_meteo_raw_data (models/open_meteo_raw_data.sql)
+  Parser Error: syntax error at or near ";".
+[0m11:13:14.643633 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:13:14.643848 [debug] [MainThread]: On master: BEGIN
+[0m11:13:14.643991 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:13:14.673142 [debug] [MainThread]: SQL status: OK in 0.029 seconds
+[0m11:13:14.673431 [debug] [MainThread]: On master: COMMIT
+[0m11:13:14.673767 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:13:14.673944 [debug] [MainThread]: On master: COMMIT
+[0m11:13:14.674267 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m11:13:14.674510 [debug] [MainThread]: On master: Close
+[0m11:13:14.675529 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:13:14.675755 [debug] [MainThread]: Connection 'model.weather_dbt_project.open_meteo_raw_data' was properly closed.
+[0m11:13:14.675937 [info ] [MainThread]: 
+[0m11:13:14.676232 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.43 seconds (0.43s).
+[0m11:13:14.676630 [debug] [MainThread]: Command end result
+[0m11:13:14.693900 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ericliao/climate_elt/dbt/target/manifest.json
+[0m11:13:14.695006 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ericliao/climate_elt/dbt/target/semantic_manifest.json
+[0m11:13:14.698971 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/ericliao/climate_elt/dbt/target/run_results.json
+[0m11:13:14.699154 [info ] [MainThread]: 
+[0m11:13:14.699377 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m11:13:14.699557 [info ] [MainThread]: 
+[0m11:13:14.699757 [error] [MainThread]:   Runtime Error in model open_meteo_raw_data (models/open_meteo_raw_data.sql)
+  Parser Error: syntax error at or near ";"
+[0m11:13:14.699914 [info ] [MainThread]: 
+[0m11:13:14.700091 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m11:13:14.701515 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.0108193, "process_in_blocks": "0", "process_kernel_time": 0.390105, "process_mem_max_rss": "141361152", "process_out_blocks": "0", "process_user_time": 1.970976}
+[0m11:13:14.701941 [debug] [MainThread]: Command `dbt run` failed at 11:13:14.701736 after 1.01 seconds
+[0m11:13:14.702229 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076fc280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107556160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1091da340>]}
+[0m11:13:14.702457 [debug] [MainThread]: Flushing usage events
+[0m11:13:14.910991 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:14:06.383055 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054282b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106cf3130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106cf3460>]}
+
+
+============================== 11:14:06.385841 | 53c9459c-2955-4eb5-ba70-9fdf76b76bdb ==============================
+[0m11:14:06.385841 [info ] [MainThread]: Running with dbt=1.9.2
+[0m11:14:06.386268 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '.', 'log_path': '/Users/ericliao/climate_elt/dbt/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run --profiles-dir . -s models/open_meteo_raw_data.sql', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:14:06.519712 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '53c9459c-2955-4eb5-ba70-9fdf76b76bdb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1057dfbe0>]}
+[0m11:14:06.550502 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '53c9459c-2955-4eb5-ba70-9fdf76b76bdb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106efab20>]}
+[0m11:14:06.552921 [info ] [MainThread]: Registered adapter: duckdb=1.9.1
+[0m11:14:06.623254 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m11:14:06.717172 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m11:14:06.717578 [debug] [MainThread]: Partial parsing: updated file: weather_dbt_project://models/open_meteo_raw_data.sql
+[0m11:14:06.966085 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '53c9459c-2955-4eb5-ba70-9fdf76b76bdb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1078a5eb0>]}
+[0m11:14:07.021292 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ericliao/climate_elt/dbt/target/manifest.json
+[0m11:14:07.022618 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ericliao/climate_elt/dbt/target/semantic_manifest.json
+[0m11:14:07.060109 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '53c9459c-2955-4eb5-ba70-9fdf76b76bdb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107804220>]}
+[0m11:14:07.060436 [info ] [MainThread]: Found 2 models, 1 seed, 28 data tests, 424 macros
+[0m11:14:07.060623 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '53c9459c-2955-4eb5-ba70-9fdf76b76bdb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107804970>]}
+[0m11:14:07.061615 [info ] [MainThread]: 
+[0m11:14:07.061806 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:14:07.061959 [info ] [MainThread]: 
+[0m11:14:07.062214 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m11:14:07.062678 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_open_weather_database'
+[0m11:14:07.097319 [debug] [ThreadPool]: Using duckdb connection "list_open_weather_database"
+[0m11:14:07.097577 [debug] [ThreadPool]: On list_open_weather_database: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "list_open_weather_database"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"open_weather_database"'
+    
+  
+  
+[0m11:14:07.097745 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:14:07.177384 [debug] [ThreadPool]: SQL status: OK in 0.080 seconds
+[0m11:14:07.178348 [debug] [ThreadPool]: On list_open_weather_database: Close
+[0m11:14:07.180007 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_open_weather_database, now create_open_weather_database_main)
+[0m11:14:07.180310 [debug] [ThreadPool]: Creating schema "database: "open_weather_database"
+schema: "main"
+"
+[0m11:14:07.184454 [debug] [ThreadPool]: Using duckdb connection "create_open_weather_database_main"
+[0m11:14:07.184643 [debug] [ThreadPool]: On create_open_weather_database_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "create_open_weather_database_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='open_weather_database'
+        and type='sqlite'
+    
+  
+[0m11:14:07.184797 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:14:07.207711 [debug] [ThreadPool]: SQL status: OK in 0.023 seconds
+[0m11:14:07.208798 [debug] [ThreadPool]: Using duckdb connection "create_open_weather_database_main"
+[0m11:14:07.208978 [debug] [ThreadPool]: On create_open_weather_database_main: BEGIN
+[0m11:14:07.209180 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:14:07.209331 [debug] [ThreadPool]: Using duckdb connection "create_open_weather_database_main"
+[0m11:14:07.209473 [debug] [ThreadPool]: On create_open_weather_database_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "create_open_weather_database_main"} */
+
+    
+    
+        create schema if not exists "open_weather_database"."main"
+    
+[0m11:14:07.209924 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:14:07.210356 [debug] [ThreadPool]: On create_open_weather_database_main: COMMIT
+[0m11:14:07.210512 [debug] [ThreadPool]: Using duckdb connection "create_open_weather_database_main"
+[0m11:14:07.210648 [debug] [ThreadPool]: On create_open_weather_database_main: COMMIT
+[0m11:14:07.210835 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:14:07.210986 [debug] [ThreadPool]: On create_open_weather_database_main: Close
+[0m11:14:07.214735 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_open_weather_database_main, now list_open_weather_database_main)
+[0m11:14:07.218511 [debug] [ThreadPool]: Using duckdb connection "list_open_weather_database_main"
+[0m11:14:07.218701 [debug] [ThreadPool]: On list_open_weather_database_main: BEGIN
+[0m11:14:07.218845 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:14:07.242132 [debug] [ThreadPool]: SQL status: OK in 0.023 seconds
+[0m11:14:07.242411 [debug] [ThreadPool]: Using duckdb connection "list_open_weather_database_main"
+[0m11:14:07.242580 [debug] [ThreadPool]: On list_open_weather_database_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "connection_name": "list_open_weather_database_main"} */
+select
+      'open_weather_database' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'open_weather_database'
+  
+[0m11:14:07.250366 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m11:14:07.251283 [debug] [ThreadPool]: On list_open_weather_database_main: ROLLBACK
+[0m11:14:07.252608 [debug] [ThreadPool]: Failed to rollback 'list_open_weather_database_main'
+[0m11:14:07.252776 [debug] [ThreadPool]: On list_open_weather_database_main: Close
+[0m11:14:07.254019 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '53c9459c-2955-4eb5-ba70-9fdf76b76bdb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105f2d7f0>]}
+[0m11:14:07.254329 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:14:07.254494 [debug] [MainThread]: On master: BEGIN
+[0m11:14:07.254630 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:14:07.278016 [debug] [MainThread]: SQL status: OK in 0.023 seconds
+[0m11:14:07.278288 [debug] [MainThread]: On master: COMMIT
+[0m11:14:07.278451 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:14:07.278595 [debug] [MainThread]: On master: COMMIT
+[0m11:14:07.278781 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m11:14:07.278937 [debug] [MainThread]: On master: Close
+[0m11:14:07.280329 [debug] [Thread-1  ]: Began running node model.weather_dbt_project.open_meteo_raw_data
+[0m11:14:07.280703 [info ] [Thread-1  ]: 1 of 1 START sql table model main.open_meteo_raw_data .......................... [RUN]
+[0m11:14:07.280971 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_open_weather_database_main, now model.weather_dbt_project.open_meteo_raw_data)
+[0m11:14:07.281160 [debug] [Thread-1  ]: Began compiling node model.weather_dbt_project.open_meteo_raw_data
+[0m11:14:07.286531 [debug] [Thread-1  ]: Writing injected SQL for node "model.weather_dbt_project.open_meteo_raw_data"
+[0m11:14:07.286985 [debug] [Thread-1  ]: Began executing node model.weather_dbt_project.open_meteo_raw_data
+[0m11:14:07.301724 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m11:14:07.301938 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: BEGIN
+[0m11:14:07.302112 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m11:14:07.327455 [debug] [Thread-1  ]: SQL status: OK in 0.025 seconds
+[0m11:14:07.327741 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m11:14:07.327949 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "node_id": "model.weather_dbt_project.open_meteo_raw_data"} */
+
+        INSTALL http_client FROM community;
+      
+[0m11:14:07.328571 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m11:14:07.329371 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m11:14:07.329583 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "node_id": "model.weather_dbt_project.open_meteo_raw_data"} */
+
+        LOAD http_client;
+      
+[0m11:14:07.347249 [debug] [Thread-1  ]: SQL status: OK in 0.017 seconds
+[0m11:14:07.353012 [debug] [Thread-1  ]: Writing runtime sql for node "model.weather_dbt_project.open_meteo_raw_data"
+[0m11:14:07.353563 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m11:14:07.353850 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "node_id": "model.weather_dbt_project.open_meteo_raw_data"} */
+
+  
+    
+    
+
+    create  table
+      "open_weather_database"."main"."open_meteo_raw_data__dbt_tmp"
+  
+    as (
+      -- models/open_meteo_raw_data.sql
+
+
+
+-- GET Request Example w/ JSON Parsing
+WITH __input AS (
+  SELECT
+    http_get(
+        'https://archive-api.open-meteo.com/v1/archive',
+        headers => MAP {
+          'accept': 'application/json'
+        },
+        params => MAP {
+          'latitude':cities.latitude::string,
+          'longitude':cities.longitude::string,
+          'start_date':date_add(current_date, interval (-4) day)::date::string,
+          'end_date':date_add(current_date, interval (-2) day)::date::string,
+          'hourly':'temperature_2m,precipitation,rain,snowfall,surface_pressure,cloud_cover,wind_speed_10m,soil_temperature_0_to_7cm,soil_moisture_0_to_7cm',
+          'timezone':'America/New_York'
+        }
+    ) AS res,
+    cities.city
+from cities
+),
+cities as (
+  select 
+    *
+  from
+    "open_weather_database"."main"."cities_info"
+),
+cte as (
+  select 
+    (res->>'status')::int as status,
+    (res->>'reason') as reason,
+    (res->>'body')::json as res2,
+    city
+  from
+    __input
+),
+__response AS (
+  SELECT
+    status,
+    reason,
+    city,
+    (res2->>'latitude')::float AS latitude,
+    (res2->>'longitude')::float AS longitude,
+    (res2->>'generationtime_ms')::float AS generationtime_ms,
+    (res2->>'utc_offset_seconds')::int AS utc_offset_seconds,
+    (res2->>'timezone')::string AS timezone,
+    (res2->>'timezone_abbreviation')::string AS timezone_abbreviation,
+    (res2->>'elevation')::int AS elevation,
+    (res2->'hourly_units')::map(string, string) AS hourly_units,
+    unnest((res2->'hourly'->'time')::timestamp[]) as time,
+    unnest((res2->'hourly'->'temperature_2m')::float[]) as temperature_2m,
+    unnest((res2->'hourly'->'precipitation')::float[]) as precipitation,
+    unnest((res2->'hourly'->'rain')::float[]) as rain,
+    unnest((res2->'hourly'->'snowfall')::float[]) as snowfall,
+    unnest((res2->'hourly'->'surface_pressure')::float[]) as surface_pressure,
+    unnest((res2->'hourly'->'cloud_cover')::float[]) as cloud_cover,
+    unnest((res2->'hourly'->'wind_speed_10m')::float[]) as wind_speed_10m,
+    unnest((res2->'hourly'->'soil_temperature_0_to_7cm')::float[]) as soil_temperature_0_to_7cm,
+    unnest((res2->'hourly'->'soil_moisture_0_to_7cm')::float[]) as soil_moisture_0_to_7cm
+  FROM
+    cte
+
+)
+SELECT
+  *
+FROM
+  __response
+    );
+  
+  
+[0m11:14:33.810627 [debug] [Thread-1  ]: SQL status: OK in 26.455 seconds
+[0m11:14:33.833418 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m11:14:33.833850 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "node_id": "model.weather_dbt_project.open_meteo_raw_data"} */
+alter table "open_weather_database"."main"."open_meteo_raw_data__dbt_tmp" rename to "open_meteo_raw_data"
+[0m11:14:33.835298 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m11:14:33.838762 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m11:14:33.839037 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "node_id": "model.weather_dbt_project.open_meteo_raw_data"} */
+
+        insert or ignore into weather_accumulation_data by name (select * exclude (status, reason) from "open_weather_database"."main"."open_meteo_raw_data")
+      
+[0m11:14:33.853176 [debug] [Thread-1  ]: SQL status: OK in 0.014 seconds
+[0m11:14:33.860034 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: COMMIT
+[0m11:14:33.860348 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m11:14:33.860537 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: COMMIT
+[0m11:14:33.869393 [debug] [Thread-1  ]: SQL status: OK in 0.009 seconds
+[0m11:14:33.872838 [debug] [Thread-1  ]: Using duckdb connection "model.weather_dbt_project.open_meteo_raw_data"
+[0m11:14:33.873251 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_beginner_profile", "target_name": "dev", "node_id": "model.weather_dbt_project.open_meteo_raw_data"} */
+drop table if exists "open_weather_database"."main"."open_meteo_raw_data__dbt_backup" cascade
+[0m11:14:33.873767 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m11:14:33.875612 [debug] [Thread-1  ]: On model.weather_dbt_project.open_meteo_raw_data: Close
+[0m11:14:33.919718 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '53c9459c-2955-4eb5-ba70-9fdf76b76bdb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073629a0>]}
+[0m11:14:33.920254 [info ] [Thread-1  ]: 1 of 1 OK created sql table model main.open_meteo_raw_data ..................... [[32mOK[0m in 26.64s]
+[0m11:14:33.920590 [debug] [Thread-1  ]: Finished running node model.weather_dbt_project.open_meteo_raw_data
+[0m11:14:33.921488 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:14:33.921719 [debug] [MainThread]: On master: BEGIN
+[0m11:14:33.921883 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:14:33.966552 [debug] [MainThread]: SQL status: OK in 0.044 seconds
+[0m11:14:33.967350 [debug] [MainThread]: On master: COMMIT
+[0m11:14:33.967561 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:14:33.967877 [debug] [MainThread]: On master: COMMIT
+[0m11:14:33.968293 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m11:14:33.968527 [debug] [MainThread]: On master: Close
+[0m11:14:33.969773 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:14:33.970046 [debug] [MainThread]: Connection 'model.weather_dbt_project.open_meteo_raw_data' was properly closed.
+[0m11:14:33.970249 [info ] [MainThread]: 
+[0m11:14:33.970436 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 26.91 seconds (26.91s).
+[0m11:14:33.970815 [debug] [MainThread]: Command end result
+[0m11:14:34.000065 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ericliao/climate_elt/dbt/target/manifest.json
+[0m11:14:34.003660 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ericliao/climate_elt/dbt/target/semantic_manifest.json
+[0m11:14:34.011208 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/ericliao/climate_elt/dbt/target/run_results.json
+[0m11:14:34.011553 [info ] [MainThread]: 
+[0m11:14:34.011821 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:14:34.011992 [info ] [MainThread]: 
+[0m11:14:34.012171 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m11:14:34.013235 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 27.674189, "process_in_blocks": "0", "process_kernel_time": 0.509788, "process_mem_max_rss": "200638464", "process_out_blocks": "0", "process_user_time": 3.159213}
+[0m11:14:34.013497 [debug] [MainThread]: Command `dbt run` succeeded at 11:14:34.013444 after 27.67 seconds
+[0m11:14:34.013726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054282b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077e23a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1057dfbe0>]}
+[0m11:14:34.013947 [debug] [MainThread]: Flushing usage events
+[0m11:14:34.258061 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -3,7 +3,7 @@ dbt_beginner_profile:
   outputs:
     dev:
       type: duckdb
-      path: 'duck_db_files/database_name.duckdb'
+      path: "duck_db_files/open_weather_database.duckdb"
       extensions:
         - httpfs
         - parquet
