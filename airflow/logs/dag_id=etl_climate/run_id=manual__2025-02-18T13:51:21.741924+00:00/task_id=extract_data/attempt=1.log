@@ -1,0 +1,33 @@
+[2025-02-18T13:51:24.837+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-18T13:51:24.844+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_climate.extract_data manual__2025-02-18T13:51:21.741924+00:00 [queued]>
+[2025-02-18T13:51:24.847+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_climate.extract_data manual__2025-02-18T13:51:21.741924+00:00 [queued]>
+[2025-02-18T13:51:24.847+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-18T13:51:24.855+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): extract_data> on 2025-02-18 13:51:21.741924+00:00
+[2025-02-18T13:51:24.859+0000] {standard_task_runner.py:72} INFO - Started process 1232 to run task
+[2025-02-18T13:51:24.862+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'etl_climate', 'extract_data', 'manual__2025-02-18T13:51:21.741924+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/climate_extract_dag.py', '--cfg-path', '/tmp/tmpoz3cf3e0']
+[2025-02-18T13:51:24.864+0000] {standard_task_runner.py:105} INFO - Job 35: Subtask extract_data
+[2025-02-18T13:51:24.889+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_climate.extract_data manual__2025-02-18T13:51:21.741924+00:00 [running]> on host f1d396ca8f61
+[2025-02-18T13:51:24.925+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_climate' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2025-02-18T13:51:21.741924+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-18T13:51:21.741924+00:00'
+[2025-02-18T13:51:24.926+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-18T13:51:24.985+0000] {docker.py:379} INFO - Starting docker container from image dbt_docker_image
+[2025-02-18T13:51:25.006+0000] {docker.py:387} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2025-02-18T13:51:28.214+0000] {docker.py:73} INFO - [0m13:51:28  Running with dbt=1.9.2
+[2025-02-18T13:51:28.633+0000] {docker.py:73} INFO - [0m13:51:28  Registered adapter: duckdb=1.9.1
+[2025-02-18T13:51:28.691+0000] {docker.py:73} INFO - [0m13:51:28  Unable to do partial parsing because saved manifest not found. Starting full parse.
+[2025-02-18T13:51:29.793+0000] {docker.py:73} INFO - [0m13:51:29  Found 1 model, 1 seed, 19 data tests, 424 macros
+[2025-02-18T13:51:29.794+0000] {docker.py:73} INFO - [0m13:51:29
+[2025-02-18T13:51:29.795+0000] {docker.py:73} INFO - [0m13:51:29  Concurrency: 1 threads (target='dev')
+[2025-02-18T13:51:29.795+0000] {docker.py:73} INFO - [0m13:51:29
+[2025-02-18T13:51:32.143+0000] {docker.py:73} INFO - [0m13:51:32  1 of 1 START sql table model main.open_meteo_raw_data .......................... [RUN]
+[2025-02-18T13:51:59.212+0000] {docker.py:73} INFO - [0m13:51:59  1 of 1 OK created sql table model main.open_meteo_raw_data ..................... [[32mOK[0m in 27.06s]
+[2025-02-18T13:51:59.272+0000] {docker.py:73} INFO - [0m13:51:59
+[2025-02-18T13:51:59.273+0000] {docker.py:73} INFO - [0m13:51:59  Finished running 1 table model in 0 hours 0 minutes and 29.47 seconds (29.47s).
+[2025-02-18T13:51:59.385+0000] {docker.py:73} INFO - [0m13:51:59
+[2025-02-18T13:51:59.386+0000] {docker.py:73} INFO - [0m13:51:59  [32mCompleted successfully[0m
+[2025-02-18T13:51:59.386+0000] {docker.py:73} INFO - [0m13:51:59
+[2025-02-18T13:51:59.387+0000] {docker.py:73} INFO - [0m13:51:59  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2025-02-18T13:52:00.185+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-18T13:52:00.186+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_climate, task_id=extract_data, run_id=manual__2025-02-18T13:51:21.741924+00:00, execution_date=20250218T135121, start_date=20250218T135124, end_date=20250218T135200
+[2025-02-18T13:52:00.226+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-18T13:52:00.235+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-18T13:52:00.236+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

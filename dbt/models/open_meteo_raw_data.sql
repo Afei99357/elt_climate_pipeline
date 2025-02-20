@@ -1,7 +1,7 @@
 -- models/open_meteo_raw_data.sql
 
 {{ config(materialized='table', pre_hook=["INSTALL http_client FROM community;", "LOAD http_client;"], post_hook="
-insert or ignore into weather_accumulation_data by name (select * exclude (status, reason) from {{this}})")}}
+insert or replace into weather_accumulation_data by name (select * exclude (status, reason) from {{this}})")}}
 
 -- GET Request Example w/ JSON Parsing
 WITH __input AS (
@@ -14,7 +14,7 @@ WITH __input AS (
         params => MAP {
           'latitude':cities.latitude::string,
           'longitude':cities.longitude::string,
-          'start_date':date_add(current_date, interval (-4) day)::date::string,
+          'start_date':date_add(current_date, interval (-5) day)::date::string,
           'end_date':date_add(current_date, interval (-2) day)::date::string,
           'hourly':'temperature_2m,precipitation,rain,snowfall,surface_pressure,cloud_cover,wind_speed_10m,soil_temperature_0_to_7cm,soil_moisture_0_to_7cm',
           'timezone':'America/New_York'
