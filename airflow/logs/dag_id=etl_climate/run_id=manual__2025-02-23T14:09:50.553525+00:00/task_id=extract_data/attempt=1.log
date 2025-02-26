@@ -1,0 +1,32 @@
+[2025-02-23T14:09:53.665+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-23T14:09:53.670+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_climate.extract_data manual__2025-02-23T14:09:50.553525+00:00 [queued]>
+[2025-02-23T14:09:53.673+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_climate.extract_data manual__2025-02-23T14:09:50.553525+00:00 [queued]>
+[2025-02-23T14:09:53.673+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-23T14:09:53.681+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): extract_data> on 2025-02-23 14:09:50.553525+00:00
+[2025-02-23T14:09:53.683+0000] {standard_task_runner.py:72} INFO - Started process 122 to run task
+[2025-02-23T14:09:53.685+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'etl_climate', 'extract_data', 'manual__2025-02-23T14:09:50.553525+00:00', '--job-id', '70', '--raw', '--subdir', 'DAGS_FOLDER/climate_extract_dag.py', '--cfg-path', '/tmp/tmpagucx2kc']
+[2025-02-23T14:09:53.687+0000] {standard_task_runner.py:105} INFO - Job 70: Subtask extract_data
+[2025-02-23T14:09:53.705+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_climate.extract_data manual__2025-02-23T14:09:50.553525+00:00 [running]> on host a5a513c5bb31
+[2025-02-23T14:09:53.737+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_climate' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2025-02-23T14:09:50.553525+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-23T14:09:50.553525+00:00'
+[2025-02-23T14:09:53.738+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-23T14:09:53.770+0000] {docker.py:379} INFO - Starting docker container from image dbt_docker_image
+[2025-02-23T14:09:55.912+0000] {docker.py:73} INFO - [0m14:09:55  Running with dbt=1.9.2
+[2025-02-23T14:09:56.111+0000] {docker.py:73} INFO - [0m14:09:56  Registered adapter: duckdb=1.9.1
+[2025-02-23T14:09:56.162+0000] {docker.py:73} INFO - [0m14:09:56  Unable to do partial parsing because saved manifest not found. Starting full parse.
+[2025-02-23T14:09:57.276+0000] {docker.py:73} INFO - [0m14:09:57  Found 1 model, 1 seed, 19 data tests, 424 macros
+[2025-02-23T14:09:57.277+0000] {docker.py:73} INFO - [0m14:09:57
+[2025-02-23T14:09:57.278+0000] {docker.py:73} INFO - [0m14:09:57  Concurrency: 1 threads (target='dev')
+[2025-02-23T14:09:57.278+0000] {docker.py:73} INFO - [0m14:09:57
+[2025-02-23T14:09:58.719+0000] {docker.py:73} INFO - [0m14:09:58  1 of 1 START sql table model main.open_meteo_raw_data .......................... [RUN]
+[2025-02-23T14:10:25.773+0000] {docker.py:73} INFO - [0m14:10:25  1 of 1 OK created sql table model main.open_meteo_raw_data ..................... [[32mOK[0m in 27.05s]
+[2025-02-23T14:10:25.811+0000] {docker.py:73} INFO - [0m14:10:25
+[2025-02-23T14:10:25.811+0000] {docker.py:73} INFO - [0m14:10:25  Finished running 1 table model in 0 hours 0 minutes and 28.53 seconds (28.53s).
+[2025-02-23T14:10:25.876+0000] {docker.py:73} INFO - [0m14:10:25
+[2025-02-23T14:10:25.876+0000] {docker.py:73} INFO - [0m14:10:25  [32mCompleted successfully[0m
+[2025-02-23T14:10:25.877+0000] {docker.py:73} INFO - [0m14:10:25
+[2025-02-23T14:10:25.877+0000] {docker.py:73} INFO - [0m14:10:25  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2025-02-23T14:10:26.354+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-23T14:10:26.355+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_climate, task_id=extract_data, run_id=manual__2025-02-23T14:09:50.553525+00:00, execution_date=20250223T140950, start_date=20250223T140953, end_date=20250223T141026
+[2025-02-23T14:10:26.401+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-23T14:10:26.411+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-02-23T14:10:26.413+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

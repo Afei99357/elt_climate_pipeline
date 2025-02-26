@@ -1,7 +1,25 @@
 -- models/open_meteo_raw_data.sql
 
+-- {{ config(materialized='table', pre_hook=["INSTALL http_client FROM community;", "LOAD http_client;"], post_hook="
+-- insert or replace into weather_accumulation_data by name (select DISTINCT * exclude (status, reason) from {{this}})")}}
+
+
 {{ config(materialized='table', pre_hook=["INSTALL http_client FROM community;", "LOAD http_client;"], post_hook="
-insert or replace into weather_accumulation_data by name (select * exclude (status, reason) from {{this}})")}}
+INSERT INTO weather_accumulation_data AS target by name
+SELECT DISTINCT * EXCLUDE (status, reason) 
+FROM {{this}}
+ON CONFLICT (time, latitude, longitude) 
+DO UPDATE SET 
+    temperature_2m = COALESCE(target.temperature_2m, EXCLUDED.temperature_2m),
+    precipitation = COALESCE(target.precipitation, EXCLUDED.precipitation),
+    rain = COALESCE(target.rain, EXCLUDED.rain),
+    snowfall = COALESCE(target.snowfall, EXCLUDED.snowfall),
+    surface_pressure = COALESCE(target.surface_pressure, EXCLUDED.surface_pressure),
+    cloud_cover = COALESCE(target.cloud_cover, EXCLUDED.cloud_cover),
+    wind_speed_10m = COALESCE(target.wind_speed_10m, EXCLUDED.wind_speed_10m),
+    soil_temperature_0_to_7cm = COALESCE(target.soil_temperature_0_to_7cm, EXCLUDED.soil_temperature_0_to_7cm),
+    soil_moisture_0_to_7cm = COALESCE(target.soil_moisture_0_to_7cm, EXCLUDED.soil_moisture_0_to_7cm);
+")}}
 
 -- GET Request Example w/ JSON Parsing
 WITH __input AS (

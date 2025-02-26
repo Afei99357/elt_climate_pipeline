@@ -20,6 +20,7 @@ with DAG(
         image="dbt_docker_image",
         auto_remove='force',
         mounts=[Mount(target="/dbt_work_dir/duck_db_files", source="/Users/ericliao/climate_elt/dbt/duck_db_files", type='bind')],
+        mount_tmp_dir=False,
         command=['uv', 'run', 'dbt', 'run', '--profiles-dir', '/dbt_work_dir', '-s', 'models/open_meteo_raw_data.sql'],
         retries = 1,
         retry_delay = timedelta(minutes=1)
